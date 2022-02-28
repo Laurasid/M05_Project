@@ -63,13 +63,12 @@ if __name__ == "__main__":
 
     y_pred = lr.predict(regressor, x_test)
 
-    #print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
-    sum = 0
-    for i in range (len(y_pred)):
-        sum += (y_pred[i]-y_test[i])
-    error = sum/(len(y_pred))
-    print (error)
+    mae = lr.MAE(y_test, y_pred)
+    print(mae)
 
-    plt.plot(y_pred,'ro')
-    plt.plot(y_test,'ro', color='green')
-    plt.show()
+    # fig = plt.figure()
+    # plt.scatter(y_test, y_pred, alpha=.5)
+    # fig.suptitle('y_test vs y_pred', fontsize = 20)              # Plot heading
+    # plt.xlabel('y_test', fontsize = 18)                          # X-label
+    # plt.ylabel('y_pred', fontsize = 16)
+    # plt.show()
