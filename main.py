@@ -1,8 +1,8 @@
 import numpy as np
-
 from preprocessor import  preprocessing as pp
 from model import linear_regression as lr
-import matplotlib.pyplot as plt
+from analysis import analyse
+
 
 if __name__ == "__main__":
     #--- Choose dataset
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     y_pred = lr.predict(regressor, x_test)
 
     print("y_pred : " , y_pred.shape)
-    mae = lr.MAE(y_test, y_pred)
+    mae = analyse.MAE(y_test, y_pred)
     print(mae)
 
   #  fig = plt.figure()
