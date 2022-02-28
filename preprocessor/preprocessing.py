@@ -22,6 +22,8 @@ def import_dataset(url):
         text = np.loadtxt(url)
         #turn text file as pandas dataframe
         dataset = pd.DataFrame(text, columns=['CRIM','ZN','INDUS', 'CHAS','NOX', 'RM','AGE','DIS','RAD','TAX', 'PTRATIO','B','LSTAT', 'MEDV'])
+    else:
+        raise Exception("This dataset extension cannot be use. Use .csv or .data file.")
     return dataset
 
 
@@ -75,6 +77,8 @@ def preprocessing(dataset, nSplit, nNorm):
         x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.5,random_state = 2)
     elif nSplit == 3:
         x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.5,random_state = 1)
+    else:
+        raise Exception("Nothing developped for this split entry. Choose 1,2 or 3 !")
 
     #normalize the values x_train, x_test
     if nNorm == 1:
@@ -89,6 +93,9 @@ def preprocessing(dataset, nSplit, nNorm):
     elif nNorm ==4:
         x_train = normalize(x_train)
         x_test = normalize(x_test)
+    else:
+        raise Exception("Nothing developped for this scaling entry. Choose 1,2,3 or 4!")
+
 
     return x_train,x_test,y_train, y_test
 

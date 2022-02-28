@@ -18,6 +18,8 @@ if __name__ == "__main__":
         url = 'Data/winequality-white.csv'
     elif nDataset == 3:
         url = 'Data/housing.data'
+    else:
+        raise Exception("No dataset for that entry")
 
     print("Importing dataset...\n")
 
@@ -50,25 +52,26 @@ if __name__ == "__main__":
 
     #--------------------------------------------------
     #check some size
-    #print(dataset.shape)
-    #print("xtrain : ", x_train.shape)
-    #print("xtest : ", x_test.shape)
-    #print("ytrain : ", y_train.shape)
-    #print("ytest : ", x_test.shape)
+    print(dataset.shape)
+    print("xtrain : ", x_train.shape)
+    print("xtest : ", x_test.shape)
+    print("ytrain : ", y_train.shape)
+    print("ytest : ", x_test.shape)
 
 
-    #start LINEAR REGRESSION
+    #Test LINEAR REGRESSION
 
     regressor = lr.train(x_train, y_train)
 
     y_pred = lr.predict(regressor, x_test)
 
+    print("y_pred : " , y_pred.shape)
     mae = lr.MAE(y_test, y_pred)
     print(mae)
 
-    # fig = plt.figure()
-    # plt.scatter(y_test, y_pred, alpha=.5)
-    # fig.suptitle('y_test vs y_pred', fontsize = 20)              # Plot heading
-    # plt.xlabel('y_test', fontsize = 18)                          # X-label
-    # plt.ylabel('y_pred', fontsize = 16)
-    # plt.show()
+  #  fig = plt.figure()
+  #  plt.scatter(y_test, y_pred, alpha=.5)
+  #  fig.suptitle('y_test vs y_pred', fontsize = 20)              # Plot heading
+  #  plt.xlabel('y_test', fontsize = 18)                          # X-label
+  #  plt.ylabel('y_pred', fontsize = 16)
+  #  plt.show()
