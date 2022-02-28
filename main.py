@@ -68,7 +68,7 @@ if __name__ == "__main__":
     print("y_pred : " , y_pred.shape)
     mae = analyse.MAE(y_test, y_pred)
     print(mae)
-
+  #  print(regressor.coef_)
   #  fig = plt.figure()
   #  plt.scatter(y_test, y_pred, alpha=.5)
   #  fig.suptitle('y_test vs y_pred', fontsize = 20)              # Plot heading
