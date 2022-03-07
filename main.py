@@ -2,6 +2,7 @@ import numpy as np
 from preprocessor import  preprocessing as pp
 from model import linear_regression as lr
 from analysis import analyse
+import matplotlib.pyplot as plt
 
 
 if __name__ == "__main__":
@@ -52,11 +53,11 @@ if __name__ == "__main__":
 
     #--------------------------------------------------
     #check some size
-    print(dataset.shape)
-    print("xtrain : ", x_train.shape)
-    print("xtest : ", x_test.shape)
-    print("ytrain : ", y_train.shape)
-    print("ytest : ", x_test.shape)
+    #print(dataset.shape)
+    #print("xtrain : ", x_train.shape)
+    #print("xtest : ", x_test.shape)
+    #print("ytrain : ", y_train.shape)
+    #print("ytest : ", y_test.shape)
 
 
     #Test LINEAR REGRESSION
@@ -65,13 +66,10 @@ if __name__ == "__main__":
 
     y_pred = lr.predict(regressor, x_test)
 
-    print("y_pred : " , y_pred.shape)
+
     mae = analyse.MAE(y_test, y_pred)
-    print(mae)
-  #  print(regressor.coef_)
-  #  fig = plt.figure()
-  #  plt.scatter(y_test, y_pred, alpha=.5)
-  #  fig.suptitle('y_test vs y_pred', fontsize = 20)              # Plot heading
-  #  plt.xlabel('y_test', fontsize = 18)                          # X-label
-  #  plt.ylabel('y_pred', fontsize = 16)
-  #  plt.show()
+    print("mae : ", mae)
+    r2 = analyse.r2(y_test, y_pred)
+    print("r2 : ", r2)
+    rmse = analyse.rmse(y_test, y_pred)
+    print("rmse : ", rmse)
