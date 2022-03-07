@@ -27,3 +27,29 @@ This project is composed of 3 packages and one main.
   - Preprocessor : package containing the preprocessing methods
   - Model : package containing the differents regression models
   - main.py : main function of test program
+  
+```bash
+|--M05_Project
+    |
+    |---Data
+    |     |-housing.data
+    |     |-housing.names
+    |     |-Index
+    |     |-winequality.names
+    |     |-winequality-red.csv
+    |     |-winequality-white.csv
+    |
+    |---preprocessor
+    |     |-preprocessing.py
+    |
+    |---model
+    |     |-linear_regression.py
+    |     |-regression_tree.py
+    |
+    |---analysis
+    |     |-analyse.py
+    |     |-correlationMatrix.png
+    |
+    |-main.py
+    |-README.md
+```

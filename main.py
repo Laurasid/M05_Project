@@ -4,6 +4,7 @@ from preprocessor import  preprocessing as pp
 from model import linear_regression as lr
 from analysis import analyse
 
+import seaborn as sns
 
 
 if __name__ == "__main__":
@@ -60,31 +61,19 @@ if __name__ == "__main__":
 
     if(nRegression == 1):
         regressor = lr.train(x_train, y_train)
+        y_pred = lr.predict(regressor, x_test)
 
-    y_pred = lr.predict(regressor, x_test)
 
-
-    mae = analyse.MAE(y_test, y_pred)
+    mae = analyse.mae(y_test, y_pred)
     print("mae : ", mae)
     r2 = analyse.r2(y_test, y_pred)
     print("r2 : ", r2)
     rmse = analyse.rmse(y_test, y_pred)
     print("rmse : ", rmse)
 
+
+
+
     analyse.correlation_matrix(dataset)
 
-    """x1 = dataset['sulphates'] #x_test[:,4]
-    x2 = dataset['chlorides'] #x_test[:,5]
-    y = dataset['quality']#y_pred
-    fig = plt.figure(figsize=(4, 4))
 
-    ax = fig.add_subplot(111, projection='3d')
-    scat_plot = ax.scatter(x1, x2, y)
-
-    cb = plt.colorbar(scat_plot, pad=0.2)
-
-    cb.set_ticks([0, 1])
-
-    cb.set_ticklabels(["Male", "Female"])
-
-    plt.show()"""

@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 ####
 # return mean absolute error
 ####
-def MAE(y_test, y_pred):
+def mae(y_test, y_pred):
     if(y_test.shape != y_pred.shape):
         raise Exception("Analyse : MAE, not same shape")
 
@@ -26,6 +26,7 @@ def rmse(y_test, y_pred):
     if(y_test.shape != y_pred.shape):
         raise Exception("Analyse : rmse, not same shape")
     return metrics.mean_squared_error(y_test,y_pred)
+
 
 
 ####
