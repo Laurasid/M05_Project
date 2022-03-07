@@ -18,6 +18,7 @@ def r2(y_test, y_pred):
     if(y_test.shape != y_pred.shape):
         raise Exception("Analyse : r2 score, not same shape")
     return metrics.r2_score(y_test,y_pred)
+
 ####
 # return root mean squared error
 ####
@@ -31,6 +32,9 @@ def rmse(y_test, y_pred):
 # Plot a correlation matrix
 ####
 def correlation_matrix(dataset):
+    fig = plt.figure(figsize=[15,10])
     sns.heatmap(dataset.corr())
     plt.title('Correlation matrix')
+    plt.savefig('analysis/correlationMatrix.png')
     plt.show()
+

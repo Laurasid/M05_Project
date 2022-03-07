@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np
 from preprocessor import  preprocessing as pp
 from model import linear_regression as lr
@@ -71,3 +72,19 @@ if __name__ == "__main__":
     print("rmse : ", rmse)
 
     analyse.correlation_matrix(dataset)
+
+    """x1 = dataset['sulphates'] #x_test[:,4]
+    x2 = dataset['chlorides'] #x_test[:,5]
+    y = dataset['quality']#y_pred
+    fig = plt.figure(figsize=(4, 4))
+
+    ax = fig.add_subplot(111, projection='3d')
+    scat_plot = ax.scatter(x1, x2, y)
+
+    cb = plt.colorbar(scat_plot, pad=0.2)
+
+    cb.set_ticks([0, 1])
+
+    cb.set_ticklabels(["Male", "Female"])
+
+    plt.show()"""
