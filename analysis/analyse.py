@@ -36,6 +36,7 @@ def correlation_matrix(dataset):
     fig = plt.figure(figsize=[15,10])
     sns.heatmap(dataset.corr())
     plt.title('Correlation matrix')
+    print("Write file analysis/correlationMatrix.png")
     plt.savefig('analysis/correlationMatrix.png')
     plt.show()
 

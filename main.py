@@ -2,12 +2,20 @@ import matplotlib.pyplot as plt
 import numpy as np
 from preprocessor import  preprocessing as pp
 from model import linear_regression as lr
+from model import ann as ann
 from analysis import analyse
 
 import seaborn as sns
 
 
 if __name__ == "__main__":
+    print("\n***********************************\n"
+          "M05 mini project \n"
+          "Sidler Laura - Amos Jerome \n"
+          "Wine quality and housing ML\n"
+          "***********************************\n")
+
+
     #--- Choose dataset
     print("Which dataset do you want ? \n"
           "\t 1-Red Wine\n"
@@ -64,16 +72,13 @@ if __name__ == "__main__":
         y_pred = lr.predict(regressor, x_test)
 
 
+    print("\n********* ANALYSE *********")
     mae = analyse.mae(y_test, y_pred)
-    print("mae : ", mae)
+    print("MAE  : \t", mae)
     r2 = analyse.r2(y_test, y_pred)
-    print("r2 : ", r2)
+    print("R2   : \t", r2)
     rmse = analyse.rmse(y_test, y_pred)
-    print("rmse : ", rmse)
-
-
+    print("RMSE : \t", rmse)
 
 
     analyse.correlation_matrix(dataset)
-
-
