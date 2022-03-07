@@ -2,7 +2,7 @@ import numpy as np
 from preprocessor import  preprocessing as pp
 from model import linear_regression as lr
 from analysis import analyse
-import matplotlib.pyplot as plt
+
 
 
 if __name__ == "__main__":
@@ -73,3 +73,5 @@ if __name__ == "__main__":
     print("r2 : ", r2)
     rmse = analyse.rmse(y_test, y_pred)
     print("rmse : ", rmse)
+
+    analyse.correlation_matrix(dataset)

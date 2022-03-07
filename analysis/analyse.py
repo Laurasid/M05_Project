@@ -1,4 +1,6 @@
 from sklearn import metrics
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 ####
 # return mean absolute error
@@ -24,4 +26,7 @@ def rmse(y_test, y_pred):
         raise Exception("Analyse : rmse, not same shape")
     return metrics.mean_squared_error(y_test,y_pred)
 
-
+def correlation_matrix(dataset):
+    sns.heatmap(dataset.corr())
+    plt.title('Correlation matrix')
+    plt.show()
