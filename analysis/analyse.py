@@ -26,6 +26,10 @@ def rmse(y_test, y_pred):
         raise Exception("Analyse : rmse, not same shape")
     return metrics.mean_squared_error(y_test,y_pred)
 
+
+####
+# Plot a correlation matrix
+####
 def correlation_matrix(dataset):
     sns.heatmap(dataset.corr())
     plt.title('Correlation matrix')

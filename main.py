@@ -52,17 +52,13 @@ if __name__ == "__main__":
     print("dataset preprocessed")
 
     #--------------------------------------------------
-    #check some size
-    #print(dataset.shape)
-    #print("xtrain : ", x_train.shape)
-    #print("xtest : ", x_test.shape)
-    #print("ytrain : ", y_train.shape)
-    #print("ytest : ", y_test.shape)
 
+    print("Which regression model do you want to use?\n"
+          "\t 1-Linear regression\n")
+    nRegression = int(input())
 
-    #Test LINEAR REGRESSION
-
-    regressor = lr.train(x_train, y_train)
+    if(nRegression == 1):
+        regressor = lr.train(x_train, y_train)
 
     y_pred = lr.predict(regressor, x_test)
 
