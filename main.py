@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import numpy as np
 
 from preprocessor import  preprocessing as pp
@@ -5,6 +6,22 @@ from model import linear_regression as lr
 import matplotlib.pyplot as plt
 
 if __name__ == "__main__":
+=======
+from preprocessor import  preprocessing as pp
+from model import linear_regression as lr
+from analysis import analyse
+
+
+
+if __name__ == "__main__":
+    print("\n***********************************\n"
+          "M05 mini project \n"
+          "Sidler Laura - Amos Jerome \n"
+          "Wine quality and housing ML\n"
+          "***********************************\n")
+
+
+>>>>>>> main
     #--- Choose dataset
     print("Which dataset do you want ? \n"
           "\t 1-Red Wine\n"
@@ -24,8 +41,12 @@ if __name__ == "__main__":
     print("Importing dataset...\n")
 
     dataset = pp.import_dataset(url)
+<<<<<<< HEAD
     #print("dataset brut")
     #print(dataset)
+=======
+
+>>>>>>> main
 
     #-----------------------------------------------------
     # --- chose split technique
@@ -51,6 +72,7 @@ if __name__ == "__main__":
     print("dataset preprocessed")
 
     #--------------------------------------------------
+<<<<<<< HEAD
     #check some size
     print(dataset.shape)
     print("xtrain : ", x_train.shape)
@@ -75,3 +97,25 @@ if __name__ == "__main__":
   #  plt.xlabel('y_test', fontsize = 18)                          # X-label
   #  plt.ylabel('y_pred', fontsize = 16)
   #  plt.show()
+=======
+
+    print("Which regression model do you want to use?\n"
+          "\t 1-Linear regression\n")
+    nRegression = int(input())
+
+    if(nRegression == 1):
+        regressor = lr.train(x_train, y_train)
+        y_pred = lr.predict(regressor, x_test)
+
+
+    print("\n********* ANALYSE *********")
+    mae = analyse.mae(y_test, y_pred)
+    print("MAE  : \t", mae)
+    r2 = analyse.r2(y_test, y_pred)
+    print("R2   : \t", r2)
+    rmse = analyse.rmse(y_test, y_pred)
+    print("RMSE : \t", rmse)
+
+
+    analyse.correlation_matrix(dataset)
+>>>>>>> main
