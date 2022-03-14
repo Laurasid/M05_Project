@@ -5,7 +5,6 @@ from model import linear_regression as lr
 from model import ann as ann
 from analysis import analyse
 
-import seaborn as sns
 
 
 if __name__ == "__main__":
