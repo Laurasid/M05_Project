@@ -13,10 +13,8 @@ For this project we use three different dataset. The datasets are allready impor
   - Numpy : 1.22.2
   - Matplotlib : 3.5.1
   - Sklearn : 1.0.2
-<<<<<<< HEAD
-=======
   - seaborn : 0.11.2
->>>>>>> main
+
 2. Open a terminal
 3. Go into the dedicated folder
 4. Run main.py : python main.py
@@ -31,8 +29,6 @@ This project is composed of 3 packages and one main.
   - Preprocessor : package containing the preprocessing methods
   - Model : package containing the differents regression models
   - main.py : main function of test program
-<<<<<<< HEAD
-=======
   
 ```bash
 |--M05_Project
@@ -59,4 +55,3 @@ This project is composed of 3 packages and one main.
     |-main.py
     |-README.md
 ```
->>>>>>> main
