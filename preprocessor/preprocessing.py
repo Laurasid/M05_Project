@@ -72,11 +72,11 @@ def preprocessing(dataset, nSplit, nNorm):
     #split into train-test set
     np.random.seed(0)
     if nSplit == 1:
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.5, random_state=3)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.5, random_state=30)
     elif nSplit == 2:
-        x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.5,random_state = 2)
+        x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.5,random_state = 20)
     elif nSplit == 3:
-        x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.5,random_state = 1)
+        x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.5,random_state = 10)
     else:
         raise Exception("Nothing developped for this split entry. Choose 1,2 or 3 !")
 

@@ -1,8 +1,5 @@
-import matplotlib.pyplot as plt
-import numpy as np
 from preprocessor import  preprocessing as pp
 from model import linear_regression as lr
-from model import ann as ann
 from analysis import analyse
 
 
@@ -34,8 +31,7 @@ if __name__ == "__main__":
     print("Importing dataset...\n")
 
     dataset = pp.import_dataset(url)
-    #print("dataset brut")
-    #print(dataset)
+
 
     #-----------------------------------------------------
     # --- chose split technique
