@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import numpy as np
-
-from preprocessor import  preprocessing as pp
-from model import linear_regression as lr
-import matplotlib.pyplot as plt
-
-if __name__ == "__main__":
-=======
 from preprocessor import  preprocessing as pp
 from model import linear_regression as lr
 from analysis import analyse
@@ -21,7 +12,6 @@ if __name__ == "__main__":
           "***********************************\n")
 
 
->>>>>>> main
     #--- Choose dataset
     print("Which dataset do you want ? \n"
           "\t 1-Red Wine\n"
@@ -41,12 +31,7 @@ if __name__ == "__main__":
     print("Importing dataset...\n")
 
     dataset = pp.import_dataset(url)
-<<<<<<< HEAD
-    #print("dataset brut")
-    #print(dataset)
-=======
 
->>>>>>> main
 
     #-----------------------------------------------------
     # --- chose split technique
@@ -72,32 +57,6 @@ if __name__ == "__main__":
     print("dataset preprocessed")
 
     #--------------------------------------------------
-<<<<<<< HEAD
-    #check some size
-    print(dataset.shape)
-    print("xtrain : ", x_train.shape)
-    print("xtest : ", x_test.shape)
-    print("ytrain : ", y_train.shape)
-    print("ytest : ", x_test.shape)
-
-
-    #Test LINEAR REGRESSION
-
-    regressor = lr.train(x_train, y_train)
-
-    y_pred = lr.predict(regressor, x_test)
-
-    print("y_pred : " , y_pred.shape)
-    mae = lr.MAE(y_test, y_pred)
-    print(mae)
-
-  #  fig = plt.figure()
-  #  plt.scatter(y_test, y_pred, alpha=.5)
-  #  fig.suptitle('y_test vs y_pred', fontsize = 20)              # Plot heading
-  #  plt.xlabel('y_test', fontsize = 18)                          # X-label
-  #  plt.ylabel('y_pred', fontsize = 16)
-  #  plt.show()
-=======
 
     print("Which regression model do you want to use?\n"
           "\t 1-Linear regression\n")
@@ -118,4 +77,3 @@ if __name__ == "__main__":
 
 
     analyse.correlation_matrix(dataset)
->>>>>>> main
