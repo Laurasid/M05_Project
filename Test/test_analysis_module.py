@@ -15,6 +15,8 @@ def test_mae() :
     :param None
 
     :return: None
+
+    :raise: AssertionError
     """
     ###
     # mae = 1/n * sum(|xi-yi|)
@@ -60,6 +62,8 @@ def test_r2() :
     :param None
 
     :return: None
+
+    :raise: AssertionError
     """
     ###
     # r^2 = 1 - sum(yi-yi^)^2 / sum(yi-y_mean)^2
@@ -104,12 +108,14 @@ def test_r2() :
 ####
 def test_rmse():
     """
-        Function to test analyse::rmse function (Root Mean Square Error).
+    Function to test analyse::rmse function (Root Mean Square Error).
 
-        :param None
+    :param None
 
-        :return: None
-        """
+    :return: None
+
+    :raise: AssertionError
+    """
     ###
     # rmse = sqrt(1/n * sum(yi^-yi)^2)
     ###
