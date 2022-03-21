@@ -28,15 +28,24 @@ def run_all_possibilities():
     for dataset in datasets:
         for seed in range(1,4): #1-2-3
             for norm in range(1,5):#1-2-3-4
-                #switch(seed):
+                #get seed real value
+                seedValue = get_seed_value(seed)
+
+                #get normalization type as string
+                normType = get_normalization_type(norm)
+
+                #run preprocessing on data
                 x_train, x_test, y_train, y_test = pp.preprocessing(dataset[1], seed, norm)
 
+                #train models
                 regressor_lr = lr.train(x_train, y_train)
                 regressor_rt = rt.train(x_train,y_train)
 
+                #predict values withs models
                 y_pred_lr = lr.predict(regressor_lr, x_test)
                 y_pred_rt = rt.predict(regressor_rt,x_test)
 
+                #calculate mae
                 mae_lr = round(analyse.mae(y_test, y_pred_lr),2)
                 mae_rt = round(analyse.mae(y_test,y_pred_rt),2)
 
@@ -46,12 +55,49 @@ def run_all_possibilities():
                 rmse_lr = round(analyse.rmse(y_test, y_pred_lr),2)
                 rmse_rt = round(analyse.rmse(y_test, y_pred_rt),2)
 
-                returnArray.append("Linear regression : dataset : " + dataset[0] + ", seed : " + str(seed) + ", norm : " + str(norm) +", mae : " + str(mae_lr) + ", r2 :" +
+                returnArray.append("Linear regression : dataset : " + dataset[0] + ", seed : " + str(seedValue) + ", scaling : " + str(normType) +", mae : " + str(mae_lr) + ", r2 :" +
                                    str(r2_lr) + ", rmse : " + str(rmse_lr) + "\n")
-                returnArray.append("Regression tree   : dataset : " + dataset[0] + ", seed : " + str(seed) + ", norm : " + str(norm) +", mae : " + str(mae_rt) + ", r2 :" +
+                returnArray.append("Regression tree   : dataset : " + dataset[0] + ", seed : " + str(seedValue) + ", scaling : " + str(normType) +", mae : " + str(mae_rt) + ", r2 :" +
                                    str(r2_rt) + ", rmse : " + str(rmse_rt) + "\n")
     return returnArray
 
+
+def get_seed_value(n):
+    """
+    Get real seed Value, based on value into preprocessing.py
+
+    :param n: int
+
+    :return: int, seedValue
+    """
+    seedValue = 0
+    if n == 1:
+        seedValue = 30
+    elif n == 2:
+        seedValue = 20
+    elif n == 3:
+        seedValue = 10
+    return seedValue
+
+
+def get_normalization_type (n):
+    """
+    Get normalization type as string, base on value into preprocessin.py
+
+    :param n: int
+
+    :return: str, normType
+    """
+    normType = ""
+    if n == 1:
+        normType = "StandardScaling"
+    elif n == 2:
+        normType = "MinMax"
+    elif n == 3:
+        normType = "Polynomial"
+    elif n == 4:
+        normType = "Normalizer"
+    return normType
 
 def save_into_file(fileName, data):
     """
@@ -71,4 +117,4 @@ def save_into_file(fileName, data):
 if __name__ == "__main__":
     all_possibilities = run_all_possibilities()
     print(len(all_possibilities))
-    save_into_file("test.txt", all_possibilities)
+    save_into_file("AllAlgoResult.txt", all_possibilities)
