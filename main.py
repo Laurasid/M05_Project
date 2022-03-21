@@ -36,9 +36,9 @@ if __name__ == "__main__":
     #-----------------------------------------------------
     # --- choose split technique
     print("Which seed value for split do you want ? \n"
-          "\t 1-seed set at 3\n"
-          "\t 2-seed set at 2\n"
-          "\t 3-seed set at 1\n")
+          "\t 1-seed set at 30\n"
+          "\t 2-seed set at 20\n"
+          "\t 3-seed set at 10\n")
     nSplit = int(input())
 
     #----------------------------------------------------

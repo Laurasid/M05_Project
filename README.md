@@ -14,6 +14,7 @@ For this project we use three different dataset. The datasets are allready impor
   - Matplotlib : 3.5.1
   - Sklearn : 1.0.2
   - seaborn : 0.11.2
+
 2. Open a terminal
 3. Go into the dedicated folder
 4. Run main.py : python main.py
