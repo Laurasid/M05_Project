@@ -25,6 +25,8 @@ def import_dataset(url):
         String for the file path
 
     :return: dataset
+
+    :raise : Exception if dataset format isn't .csv or .data
     """
     # different file extension : .csv and .data
     fileExtension = url.split(".")[1]
@@ -148,6 +150,8 @@ def preprocessing(dataset, nSplit, nNorm):
         int : normalization number to choose the normalization technique : 1: StandardScaling, 2: MinMax,
                                                                           3: Polynomial, 4: Normalizer
     :return: x_train, x_test, y_train, y_test
+
+    :raise : Exception if the entry for scaline isn't known (1,2,3,4)
     """
     data = dataset.dropna(axis="index")
     data = data.drop_duplicates()

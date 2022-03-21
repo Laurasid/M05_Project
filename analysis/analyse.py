@@ -14,6 +14,8 @@ def mae(y_test, y_pred):
     :param y_pred:
 
     :return: mea
+
+    :raise : Exception if the argument haven't same shape
     """
     if y_test.shape != y_pred.shape:
         raise Exception("Analyse : MAE, not same shape")
@@ -33,6 +35,8 @@ def r2(y_test, y_pred):
     :param y_pred:
 
     :return: r2
+
+    :raise : Exception if the argument haven't same shape
     """
     if y_test.shape != y_pred.shape:
         raise Exception("Analyse : r2 score, not same shape")
@@ -51,6 +55,8 @@ def rmse(y_test, y_pred):
     :param y_pred:
 
     :return: rmse
+
+    :raise : Exception if the argument haven't same shape
     """
     if y_test.shape != y_pred.shape:
         raise Exception("Analyse : rmse, not same shape")
