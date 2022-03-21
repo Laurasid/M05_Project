@@ -77,11 +77,11 @@ if __name__ == "__main__":
         y_pred = rt.predict(regressor, x_test)
 
     print("\n********* ANALYSE *********")
-    mae = analyse.mae(y_test, y_pred)
+    mae = round(analyse.mae(y_test, y_pred),2)
     print("MAE  : \t", mae)
-    r2 = analyse.r2(y_test, y_pred)
+    r2 = round(analyse.r2(y_test, y_pred),2)
     print("R2   : \t", r2)
-    rmse = analyse.rmse(y_test, y_pred)
+    rmse = round(analyse.rmse(y_test, y_pred),2)
     print("RMSE : \t", rmse)
 
     analyse.correlation_matrix(dataset)
