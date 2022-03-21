@@ -1,9 +1,8 @@
+import pytest
 import sys
 sys.path.append('../model')
 import regression_tree as rt
 import numpy as np
-import sklearn
-from sklearn import metrics
 import random
 
 def test_reg_tree():
