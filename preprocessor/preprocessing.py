@@ -18,6 +18,14 @@ from sklearn.model_selection import train_test_split
 
 
 def import_dataset(url):
+    """
+    Function to import the dataset from an url (lacaly on the computer)
+
+    :param url:
+        String for the file path
+
+    :return: dataset
+    """
     # different file extension : .csv and .data
     fileExtension = url.split(".")[1]
     # different treatment for csv and for .data
@@ -54,6 +62,16 @@ def import_dataset(url):
 # Normalize the data with standard scaling
 ###
 def standardScaling(dataset):
+    """
+    Function to scale the data set with a Standard Sklearn scaler
+
+    :param dataset:
+        Pandas dataframe
+
+    :return: result
+        the dataset sclaled
+    """
+
     scaler = StandardScaler()
     result = scaler.fit_transform(dataset)
     return result
@@ -63,6 +81,16 @@ def standardScaling(dataset):
 # Normalize with min-max scaler
 ###
 def minMaxScaling(dataset):
+    """
+     Function to scale the data set with a minMax Sklearn scaler
+
+    :param dataset:
+        Pandas dataframe
+
+    :return: result
+        the dataset sclaled
+    """
+
     scaler = MinMaxScaler()
     result = scaler.fit_transform(dataset)
     return result
@@ -72,6 +100,16 @@ def minMaxScaling(dataset):
 # Normalize with polynomial scaler
 ###
 def polynomialScaling(dataset):
+    """
+    Function to scale the data set with a polynomial Sklearn scaler
+
+    :param dataset:
+        Pandas dataframe
+
+    :return: result
+        the dataset sclaled
+    """
+
     scaler = PolynomialFeatures()
     result = scaler.fit_transform(dataset)
     return result
@@ -81,6 +119,15 @@ def polynomialScaling(dataset):
 #
 ###
 def normalize(dataset):
+    """
+    Function that normalize the dataset with sklearn normalizer
+    :param dataset:
+        Pandas dataframe
+
+    :return: result
+        the dataset normalized
+    """
+
     scaler = Normalizer()
     result = scaler.fit_transform(dataset)
     return result
@@ -90,6 +137,18 @@ def normalize(dataset):
 #
 ###
 def preprocessing(dataset, nSplit, nNorm):
+    """
+    Function that make all the preprocessing on a given dataset
+
+    :param dataset:
+        Pandas dataframe
+    :param nSplit:
+        int : split number to choose the split technique : 1 : random_state = 30, 2 : random_state = 20, 3: random_state = 10
+    :param nNorm:
+        int : normalization number to choose the normalization technique : 1: StandardScaling, 2: MinMax,
+                                                                          3: Polynomial, 4: Normalizer
+    :return: x_train, x_test, y_train, y_test
+    """
     data = dataset.dropna(axis="index")
     data = data.drop_duplicates()
 
