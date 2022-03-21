@@ -2,29 +2,6 @@ from preprocessor import preprocessing as pp
 from model import linear_regression as lr
 from analysis import analyse
 
-def run_all_sets():
-    returnArray = []
-
-    dataset1 = pp.import_dataset("Data/winequality-red.csv")
-    dataset2 = pp.import_dataset("Data/winequality-white.csv")
-    dataset3 = pp.import_dataset("Data/housing.data")
-
-    for seed in range(1,4): #1-2-3
-        for norm in range(1,5):
-            #switch(seed):
-
-
-            x_train, x_test, y_train, y_test = pp.preprocessing(dataset, seed, norm)
-            regressor = lr.train(x_train, y_train)
-            y_pred = lr.predict(regressor, x_test)
-            mae = analyse.mae(y_test, y_pred)
-            r2 = analyse.r2(y_test, y_pred)
-            rmse = analyse.rmse(y_test, y_pred)
-            returnArray.append("seed : " + str(seed) + ", norm : " + str(norm) +", mae : " + str(mae) + ", r2 :" + str(r2) + ", rmse : " + str(rmse))
-
-
-    return returnArray
-
 if __name__ == "__main__":
     print(
         "\n***********************************\n"
@@ -100,6 +77,4 @@ if __name__ == "__main__":
     print("RMSE : \t", rmse)
 
     analyse.correlation_matrix(dataset)
-    all = run_all_sets()
-    for i in all:
-        print(i)
+
