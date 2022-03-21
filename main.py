@@ -11,7 +11,7 @@ if __name__ == "__main__":
           "Wine quality and housing ML\n"
           "***********************************\n")
 
-
+    #-----------------------------------------------------
     #--- Choose dataset
     print("Which dataset do you want ? \n"
           "\t 1-Red Wine\n"
@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
 
     #-----------------------------------------------------
-    # --- chose split technique
+    # --- choose split technique
     print("Which seed value for split do you want ? \n"
           "\t 1-seed set at 3\n"
           "\t 2-seed set at 2\n"
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     nSplit = int(input())
 
     #----------------------------------------------------
-    #--- chose normalisation technique
+    #--- choose normalisation technique
     print("Which features scaling methode do you want ? \n"
           "\t 1-Standard scaling\n"
           "\t 2-Min-max scaling\n"
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     print("dataset preprocessed")
 
     #--------------------------------------------------
-
+    # --- choose the model
     print("Which regression model do you want to use?\n"
           "\t 1-Linear regression\n")
     nRegression = int(input())
