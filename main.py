@@ -3,7 +3,6 @@ from model import linear_regression as lr
 from model import regression_tree as rt
 from analysis import analyse
 
-
 if __name__ == "__main__":
     print(
         "\n***********************************\n"
@@ -85,3 +84,4 @@ if __name__ == "__main__":
     print("RMSE : \t", rmse)
 
     analyse.correlation_matrix(dataset)
+
