@@ -28,14 +28,14 @@ def run_all_possibilities():
                 y_pred_lr = lr.predict(regressor_lr, x_test)
                 y_pred_rt = rt.predict(regressor_rt,x_test)
 
-                mae_lr = analyse.mae(y_test, y_pred_lr)
-                mae_rt = analyse.mae(y_test,y_pred_rt)
+                mae_lr = round(analyse.mae(y_test, y_pred_lr),2)
+                mae_rt = round(analyse.mae(y_test,y_pred_rt),2)
 
-                r2_lr = analyse.r2(y_test, y_pred_lr)
-                r2_rt = analyse.r2(y_test, y_pred_rt)
+                r2_lr = round(analyse.r2(y_test, y_pred_lr),2)
+                r2_rt = round(analyse.r2(y_test, y_pred_rt),2)
 
-                rmse_lr = analyse.rmse(y_test, y_pred_lr)
-                rmse_rt = analyse.rmse(y_test, y_pred_rt)
+                rmse_lr = round(analyse.rmse(y_test, y_pred_lr),2)
+                rmse_rt = round(analyse.rmse(y_test, y_pred_rt),2)
 
                 returnArray.append("Linear regression : dataset : " + dataset[0] + ", seed : " + str(seed) + ", norm : " + str(norm) +", mae : " + str(mae_lr) + ", r2 :" +
                                    str(r2_lr) + ", rmse : " + str(rmse_lr) + "\n")
