@@ -6,6 +6,15 @@ import numpy as np
 import random
 
 def test_reg_tree():
+    """
+    Function to test regression tree module. Test for shape and type of values returned.
+
+    :param None
+
+    :return: None
+
+    :raise: AssertionError
+    """
     x_train = np.array([np.random.rand(2),
                         np.random.rand(2)])
     y_train = np.array([np.random.rand(2),
@@ -18,3 +27,4 @@ def test_reg_tree():
 
     # test shape of the model's output value
     assert np.shape(y_pred) == np.shape(x_test)
+    assert isinstance(y_pred,type(x_test))
