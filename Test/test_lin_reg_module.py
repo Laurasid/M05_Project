@@ -3,8 +3,6 @@ import sys
 sys.path.append('../model')
 import linear_regression as lr
 import numpy as np
-import sklearn
-from sklearn import metrics
 import random
 
 def test_lin_reg():
