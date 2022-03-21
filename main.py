@@ -1,5 +1,6 @@
 from preprocessor import preprocessing as pp
 from model import linear_regression as lr
+from model import regression_tree as rt
 from analysis import analyse
 
 
@@ -62,12 +63,18 @@ if __name__ == "__main__":
 
     # --------------------------------------------------
     # --- choose the model
-    print("Which regression model do you want to use?\n" "\t 1-Linear regression\n")
+    print("Which regression model do you want to use?\n" 
+          "\t 1-Linear regression\n"
+          "\t 2-Regression tree\n")
     nRegression = int(input())
 
     if nRegression == 1:
         regressor = lr.train(x_train, y_train)
         y_pred = lr.predict(regressor, x_test)
+
+    if nRegression == 2:
+        regressor = rt.train(x_train, y_train)
+        y_pred = rt.predict(regressor, x_test)
 
     print("\n********* ANALYSE *********")
     mae = analyse.mae(y_test, y_pred)
