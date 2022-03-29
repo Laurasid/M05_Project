@@ -15,6 +15,7 @@ For this project we use three different dataset. The datasets are allready impor
   - Sklearn : 1.0.2
   - seaborn : 0.11.2
   - pytest : 7.1.1
+  - Sphinx : 4.5.0
 
 2. Open a terminal
 3. Go into the dedicated folder
