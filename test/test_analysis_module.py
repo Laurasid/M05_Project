@@ -1,4 +1,4 @@
-import pytest
+#import pytest
 import sys
 sys.path.append('../analysis')
 import analyse as an
