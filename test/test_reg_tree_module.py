@@ -27,4 +27,6 @@ def test_reg_tree():
 
     # test shape of the model's output value
     assert np.shape(y_pred) == np.shape(x_test)
+
+    # module should return data with same type as the input
     assert isinstance(y_pred,type(x_test))
