@@ -1,7 +1,9 @@
 import pytest
 import sys
 import os
-sys.path.append(os.path.dirname(sys.path[0]))
+#sys.path.append(os.path.dirname(sys.path[0]))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
 
 sys.path.append('../model')
 import linear_regression as lr
