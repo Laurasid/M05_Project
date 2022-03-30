@@ -3,7 +3,7 @@ from sklearn.linear_model import LinearRegression
 
 def train (x_train, y_train):
     """
-    Function to train an linear regression model
+    Function to train a linear regression model
     :param x_train:
     :param y_train:
     :return: regressor
