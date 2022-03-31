@@ -1,4 +1,3 @@
-#import pytest
 import sys
 sys.path.append('../model')
 import linear_regression as lr

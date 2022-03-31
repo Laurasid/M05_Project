@@ -1,9 +1,15 @@
-#import pytest
 import sys
-sys.path.append('../model')
+#sys.path.append('../model')
+#import regression_tree as rt
+
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'model'))
 import regression_tree as rt
+
 import numpy as np
 import random
+
+print(sys.path)
 
 def test_reg_tree():
     """
