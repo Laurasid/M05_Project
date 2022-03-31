@@ -37,5 +37,5 @@ jobs:
         pytest -v --cov --cov-report html
     - name : Write documentation
       run : |
-        sphinx-build -b doctest test/ /doc/
+        sphinx-build -b doctest ./ /doc
         
