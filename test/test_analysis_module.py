@@ -1,9 +1,9 @@
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'analysis'))
 import analyse as an
 import numpy as np
 from sklearn import metrics
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'analysis'))
 
 
 ####
@@ -52,6 +52,7 @@ def test_mae():
     except NameError:
         print(f'Error : {NameError}')
     '''
+
 
 ####
 # test function analyse::r2 (R square)
@@ -103,6 +104,7 @@ def test_r2():
     except NameError:
         print(f'Error : {NameError}')
     '''
+
 
 ####
 # test function analyse::rmse (root mean squared error)

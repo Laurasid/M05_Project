@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
     # --------------------------------------------------
     # --- choose the model
-    print("Which regression model do you want to use?\n" 
+    print("Which regression model do you want to use?\n"
           "\t 1-Linear regression\n"
           "\t 2-Regression tree\n")
     n_regression = int(input())
