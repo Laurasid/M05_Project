@@ -1,5 +1,7 @@
 import sys
-sys.path.append('../analysis')
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'analysis'))
+
 import analyse as an
 import numpy as np
 from sklearn import metrics

@@ -1,5 +1,7 @@
 import sys
-sys.path.append('../model')
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'model'))
+
 import linear_regression as lr
 import numpy as np
 import random
