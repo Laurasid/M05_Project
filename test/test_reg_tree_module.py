@@ -1,12 +1,9 @@
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'model'))
-
 import regression_tree as rt
 import numpy as np
-import random
 
-print(sys.path)
 
 def test_reg_tree():
     """
@@ -25,11 +22,12 @@ def test_reg_tree():
     x_test = np.array([np.random.rand(2),
                        np.random.rand(2)])
 
-    regressor = rt.train(x_train,y_train)
-    y_pred = rt.predict(regressor,x_test)
+    regressor = rt.train(x_train, y_train)
+    y_pred = rt.predict(regressor, x_test)
 
     # test shape of the model's output value
     assert np.shape(y_pred) == np.shape(x_test)
 
     # module should return data with same type as the input
-    assert isinstance(y_pred,type(x_test))
+    assert isinstance(y_pred, type(x_test))
+    

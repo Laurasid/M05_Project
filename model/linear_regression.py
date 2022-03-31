@@ -1,7 +1,7 @@
 from sklearn.linear_model import LinearRegression
 
 
-def train (x_train, y_train):
+def train(x_train, y_train):
     """
     Function to train a linear regression model
     :param x_train:
@@ -14,7 +14,8 @@ def train (x_train, y_train):
 
     return regressor
 
-def predict (regressor, x_test) :
+
+def predict(regressor, x_test):
     """
     Function to make a prediction on a set of data
 
