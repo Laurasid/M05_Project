@@ -1,8 +1,8 @@
 import sys
 import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'model'))
 import linear_regression as lr
 import numpy as np
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'model'))
 
 
 def test_lin_reg():
