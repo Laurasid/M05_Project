@@ -1,13 +1,13 @@
-import pytest
 import sys
-sys.path.append('../model')
-import regression_tree as rt
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'model'))
+import linear_regression as lr
 import numpy as np
-import random
 
-def test_reg_tree():
+
+def test_lin_reg():
     """
-    Function to test regression tree module. Test for shape and type of values returned.
+    Function to test linear regression module. Test for shape and type of values returned.
 
     :param None
 
@@ -22,9 +22,9 @@ def test_reg_tree():
     x_test = np.array([np.random.rand(2),
                        np.random.rand(2)])
 
-    regressor = rt.train(x_train,y_train)
-    y_pred = rt.predict(regressor,x_test)
+    regressor = lr.train(x_train, y_train)
+    y_pred = lr.predict(regressor, x_test)
 
-    # test shape of the model's output value
+    # test shape and type of the model's output value
     assert np.shape(y_pred) == np.shape(x_test)
-    assert isinstance(y_pred,type(x_test))
+    assert isinstance(y_pred, type(x_test))

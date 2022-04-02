@@ -21,13 +21,13 @@ if __name__ == "__main__":
         "\t 2-White Wine\n"
         "\t 3-Housing\n"
     )
-    nDataset = int(input())
+    n_dataset = int(input())
     url = ""
-    if nDataset == 1:
+    if n_dataset == 1:
         url = "Data/winequality-red.csv"
-    elif nDataset == 2:
+    elif n_dataset == 2:
         url = "Data/winequality-white.csv"
-    elif nDataset == 3:
+    elif n_dataset == 3:
         url = "Data/housing.data"
     else:
         raise Exception("No dataset for that entry")
@@ -44,7 +44,7 @@ if __name__ == "__main__":
         "\t 2-seed set at 20\n"
         "\t 3-seed set at 10\n"
     )
-    nSplit = int(input())
+    n_split = int(input())
 
     # ----------------------------------------------------
     # --- choose normalisation technique
@@ -55,33 +55,33 @@ if __name__ == "__main__":
         "\t 3-PolynomialFeatures scaling\n"
         "\t 4-Normalization\n"
     )
-    nNormalization = int(input())
+    n_normalization = int(input())
 
     print("Preprocessing...")
-    x_train, x_test, y_train, y_test = pp.preprocessing(dataset, nSplit, nNormalization)
+    x_train, x_test, y_train, y_test = pp.preprocessing(dataset, n_split, n_normalization)
     print("dataset preprocessed")
 
     # --------------------------------------------------
     # --- choose the model
-    print("Which regression model do you want to use?\n" 
+    print("Which regression model do you want to use?\n"
           "\t 1-Linear regression\n"
           "\t 2-Regression tree\n")
-    nRegression = int(input())
+    n_regression = int(input())
 
-    if nRegression == 1:
+    if n_regression == 1:
         regressor = lr.train(x_train, y_train)
         y_pred = lr.predict(regressor, x_test)
 
-    if nRegression == 2:
+    if n_regression == 2:
         regressor = rt.train(x_train, y_train)
         y_pred = rt.predict(regressor, x_test)
 
     print("\n********* ANALYSE *********")
-    mae = round(analyse.mae(y_test, y_pred),2)
+    mae = round(analyse.mae(y_test, y_pred), 2)
     print("MAE  : \t", mae)
-    r2 = round(analyse.r2(y_test, y_pred),2)
+    r2 = round(analyse.r2(y_test, y_pred), 2)
     print("R2   : \t", r2)
-    rmse = round(analyse.rmse(y_test, y_pred),2)
+    rmse = round(analyse.rmse(y_test, y_pred), 2)
     print("RMSE : \t", rmse)
 
     analyse.correlation_matrix(dataset)

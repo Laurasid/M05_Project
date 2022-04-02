@@ -2,6 +2,7 @@ from sklearn import metrics
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+
 ####
 # return mean absolute error
 ####
@@ -75,7 +76,7 @@ def correlation_matrix(dataset):
 
     :return:
     """
-    fig = plt.figure(figsize=[15, 10])
+    plt.figure(figsize=[15, 10])
     sns.heatmap(dataset.corr())
     plt.title("Correlation matrix")
     print("Write file analysis/correlationMatrix.png")
