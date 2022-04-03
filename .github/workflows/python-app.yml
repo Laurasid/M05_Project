@@ -35,7 +35,7 @@ jobs:
       run: |
         # python -m pytest test/
         CWD="$(pwd)"
-        pytest -v /test --cov --cov-report html
+        pytest -v --cov --cov-report html:test/
     - name : Write documentation
       run : |
         sphinx-build -b html ./ doc
