@@ -37,5 +37,8 @@ jobs:
         pytest -v --cov=$CWD/test/
     - name : Write documentation
       run : |
-        sphinx-build -b html ./ doc
+        # generate doc from .py files
+        sphinx-apidoc -f -o ../doc ../
+        # build
+        $CWD/doc make html
         
