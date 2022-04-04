@@ -2,9 +2,20 @@ from preprocessor import preprocessing as pp
 from model import linear_regression as lr
 from model import regression_tree as rt
 from analysis import analyse
-
-
+import argparse
+import sys
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description='Run main.py to get Mae, R2, rmse and a correlation matrix. '
+                                                 'Mae, R2, rmse will be displaied on the shell, '
+                                                 'The correlation matrix is saved as .png into /analysis/. '
+                                                 'During the process you will be asked to enter some values to configurate the model.')
+    args = parser.parse_args()
+    #check that there is an argument
+    if len(sys.argv) >=2 :
+        print(args.accumulate(args.integers))
+
+
     print(
         "\n***********************************\n"
         "M05 mini project \n"
