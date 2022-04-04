@@ -5,9 +5,7 @@ name: Python application
 
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -40,5 +38,5 @@ jobs:
         # generate doc from .py files
         sphinx-apidoc -f -o ../doc ../
         # build
-        make html
+        $CWD/doc make html
         
