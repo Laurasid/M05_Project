@@ -1,8 +1,7 @@
 model package
 =============
 
-Submodules
-----------
+This package gather two modules used to construct different AI models
 
 model.linear\_regression module
 -------------------------------
@@ -16,14 +15,6 @@ model.regression\_tree module
 -----------------------------
 
 .. automodule:: model.regression_tree
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: model
    :members:
    :undoc-members:
    :show-inheritance:

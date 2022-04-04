@@ -1,9 +1,6 @@
 test package
 ============
 
-Submodules
-----------
-
 test.test\_analysis\_module module
 ----------------------------------
 
@@ -24,14 +21,6 @@ test.test\_reg\_tree\_module module
 -----------------------------------
 
 .. automodule:: test.test_reg_tree_module
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: test
    :members:
    :undoc-members:
    :show-inheritance:

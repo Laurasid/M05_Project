@@ -12,7 +12,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../'))
+sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
@@ -36,10 +36,15 @@ napoleon_google_docstring = False
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
+master_doc = "index"
+
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['.DS_Store']
+
+# short description
+short_description = u"Mini project to experiment reproducibility on AI models"
 
 
 # -- Options for HTML output -------------------------------------------------

@@ -11,7 +11,6 @@ Welcome to Project M05 - Reproductibility's documentation!
    :caption: Contents:
 	
    README
-   main
    preprocessor
    model
    analysis
