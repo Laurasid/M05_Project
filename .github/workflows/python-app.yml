@@ -36,7 +36,7 @@ jobs:
     - name : Write documentation
       run : |
         # generate doc from .py files
-        sphinx-apidoc -f -o ../doc ../
+        sphinx-apidoc -o ../doc ../
         # build
-        sphinx-build -b html doc/ doc/_build/html
+        sphinx-build -b html ../doc/ ../doc/_build/html
         
