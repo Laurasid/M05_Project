@@ -12,7 +12,7 @@ if __name__ == "__main__":
                                                  'During the process you will be asked to enter some values to configurate the model.')
     args = parser.parse_args()
     #check that there is an argument
-    if len(sys.argv) ==2 :
+    if len(sys.argv) >=2 :
         print(args.accumulate(args.integers))
 
 
