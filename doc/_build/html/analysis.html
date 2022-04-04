@@ -18,8 +18,8 @@
     <script src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="main module" href="main.html" />
-    <link rel="prev" title="M05_Project-main" href="modules.html" />
+    <link rel="next" title="test package" href="test.html" />
+    <link rel="prev" title="model package" href="model.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
     <script src="_static/css3-mediaqueries.js"></script>
@@ -35,13 +35,12 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="main.html" title="main module"
+          <a href="test.html" title="test package"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="modules.html" title="M05_Project-main"
+          <a href="model.html" title="model package"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">M05_Project-main</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">analysis package</a></li> 
       </ul>
     </div>  
@@ -61,13 +60,15 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="analysis.analyse.correlation_matrix">
 <span class="sig-prename descclassname"><span class="pre">analysis.analyse.</span></span><span class="sig-name descname"><span class="pre">correlation_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.analyse.correlation_matrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to create a correlation_matrix with seaborn lib, save it as png into analysis folder</p>
+<dd><p>Create a correlation matrix with seaborn lib, save it as png into ./analysis/
+Once the correlation matrix is created it’s shown on screen.
+:param DataFrame dataset:</p>
+<blockquote>
+<div><p>Pandas DataFrame object</p>
+</div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dataset</strong> – Pandas dataframe</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -75,55 +76,61 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="analysis.analyse.mae">
 <span class="sig-prename descclassname"><span class="pre">analysis.analyse.</span></span><span class="sig-name descname"><span class="pre">mae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.analyse.mae" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to calculate the mean aboslute error with sklearn lib</p>
+<dd><p>Compute the mean absolute error with sklearn lib</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>y_test</strong> – </p></li>
-<li><p><strong>y_pred</strong> – </p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em>) – labels that correspond to the values of test dataset</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – labels that are predicted by the model based on values of train set</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>mea</p>
+<dt class="field-even">Return float</dt>
+<dd class="field-even"><p>the mean absolute error</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>Exception</strong> – if the arguments don’t have same shapes</p>
 </dd>
 </dl>
-<p>:raise : Exception if the argument haven’t same shape</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="analysis.analyse.r2">
 <span class="sig-prename descclassname"><span class="pre">analysis.analyse.</span></span><span class="sig-name descname"><span class="pre">r2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.analyse.r2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to calculate the r2 with sklearn lib</p>
+<dd><p>Compute the r-square score with sklearn lib</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>y_test</strong> – </p></li>
-<li><p><strong>y_pred</strong> – </p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em>) – labels that correspond to the values of test dataset</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – labels that are predicted by the model based on values of train set</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>r2</p>
+<dt class="field-even">Return float</dt>
+<dd class="field-even"><p>r-square score</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>Exception</strong> – if the arguments don’t have same shapes</p>
 </dd>
 </dl>
-<p>:raise : Exception if the argument haven’t same shape</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="analysis.analyse.rmse">
 <span class="sig-prename descclassname"><span class="pre">analysis.analyse.</span></span><span class="sig-name descname"><span class="pre">rmse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#analysis.analyse.rmse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to calculate the root mean squarred error with sklearn lib</p>
+<dd><p>Compute the root-mean-square error with sklearn lib</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>y_test</strong> – </p></li>
-<li><p><strong>y_pred</strong> – </p></li>
+<li><p><strong>y_test</strong> (<em>array-like</em>) – labels that correspond to the values of test dataset</p></li>
+<li><p><strong>y_pred</strong> (<em>array-like</em>) – labels that are predicted by the model based on values of train set</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>rmse</p>
+<dt class="field-even">Return float</dt>
+<dd class="field-even"><p>the root-mean-square error</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>Exception</strong> – if the arguments don’t have same shapes</p>
 </dd>
 </dl>
-<p>:raise : Exception if the argument haven’t same shape</p>
 </dd></dl>
 
 </section>
@@ -153,13 +160,13 @@
   </div>
   <div>
     <h4>Previous topic</h4>
-    <p class="topless"><a href="modules.html"
-                          title="previous chapter">M05_Project-main</a></p>
+    <p class="topless"><a href="model.html"
+                          title="previous chapter">model package</a></p>
   </div>
   <div>
     <h4>Next topic</h4>
-    <p class="topless"><a href="main.html"
-                          title="next chapter">main module</a></p>
+    <p class="topless"><a href="test.html"
+                          title="next chapter">test package</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -192,13 +199,12 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="main.html" title="main module"
+          <a href="test.html" title="test package"
              >next</a> |</li>
         <li class="right" >
-          <a href="modules.html" title="M05_Project-main"
+          <a href="model.html" title="model package"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >M05_Project-main</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">analysis package</a></li> 
       </ul>
     </div>

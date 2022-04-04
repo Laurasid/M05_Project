@@ -2,21 +2,24 @@ from sklearn import metrics
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+"""
+This module is used to analyse the results of the model. It offers different loss functions methods.
+"""
 
-####
-# return mean absolute error
-####
 def mae(y_test, y_pred):
     """
-    Function to calculate the mean aboslute error with sklearn lib
+    Compute the mean absolute error with sklearn lib
 
-    :param y_test:
+    :param array-like y_test:
+                labels that correspond to the values of test dataset
+    :param array-like y_pred:
+                labels that are predicted by the model based on values of train set
 
-    :param y_pred:
+    :return float:
+                the mean absolute error
 
-    :return: mea
-
-    :raise : Exception if the argument haven't same shape
+    :raise Exception:
+                if the arguments don't have same shapes
     """
     if y_test.shape != y_pred.shape:
         raise Exception("Analyse : MAE, not same shape")
@@ -24,57 +27,54 @@ def mae(y_test, y_pred):
     return metrics.mean_absolute_error(y_test, y_pred)
 
 
-####
-# return r2 score
-####
 def r2(y_test, y_pred):
     """
-    Function to calculate the r2 with sklearn lib
+    Compute the r-square score with sklearn lib
 
-    :param y_test:
+    :param array-like y_test:
+                labels that correspond to the values of test dataset
+    :param array-like y_pred:
+                labels that are predicted by the model based on values of train set
 
-    :param y_pred:
+    :return float:
+                r-square score
 
-    :return: r2
-
-    :raise : Exception if the argument haven't same shape
+    :raise Exception:
+                if the arguments don't have same shapes
     """
     if y_test.shape != y_pred.shape:
         raise Exception("Analyse : r2 score, not same shape")
     return metrics.r2_score(y_test, y_pred)
 
 
-####
-# return root mean squared error
-####
 def rmse(y_test, y_pred):
     """
-    Function to calculate the root mean squarred error with sklearn lib
+    Compute the root-mean-square error with sklearn lib
 
-    :param y_test:
+    :param array-like y_test:
+                labels that correspond to the values of test dataset
+    :param array-like y_pred:
+                labels that are predicted by the model based on values of train set
 
-    :param y_pred:
+    :return float:
+                the root-mean-square error
 
-    :return: rmse
-
-    :raise : Exception if the argument haven't same shape
+    :raise Exception:
+                if the arguments don't have same shapes
     """
     if y_test.shape != y_pred.shape:
         raise Exception("Analyse : rmse, not same shape")
     return metrics.mean_squared_error(y_test, y_pred)
 
 
-####
-# Plot a correlation matrix
-####
 def correlation_matrix(dataset):
     """
-    Function to create a correlation_matrix with seaborn lib, save it as png into analysis folder
+    Create a correlation matrix with seaborn lib, save it as png into ./analysis/
+    Once the correlation matrix is created it's shown on screen.
+    :param DataFrame dataset:
+                Pandas DataFrame object
 
-    :param dataset:
-        Pandas dataframe
-
-    :return:
+    :return: None
     """
     plt.figure(figsize=[15, 10])
     sns.heatmap(dataset.corr())
