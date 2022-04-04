@@ -8,3 +8,4 @@ M05_Project-main
    main
    model
    preprocessor
+   test

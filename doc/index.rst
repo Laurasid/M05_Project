@@ -9,8 +9,13 @@ Welcome to Project M05 - Reproductibility's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-   modules
+	
+   README
+   main
+   preprocessor
+   model
+   analysis
+   test
    
 
 Indices and tables

@@ -1,0 +1,193 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>M05_Project &#8212; Project M05 - Reproductibility 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">M05_Project</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="m05-project">
+<h1>M05_Project<a class="headerlink" href="#m05-project" title="Permalink to this headline">¶</a></h1>
+<section id="datasets">
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>For this project we use three different dataset. The datasets are allready imported into project under the folder data.</dt><dd><ul class="simple">
+<li><p>Two dataset for wine quality (red-white) that could be found here : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/wine+quality">https://archive.ics.uci.edu/ml/datasets/wine+quality</a></p></li>
+<li><p>One dataset for housing price that can be found here : <a class="reference external" href="https://archive.ics.uci.edu/ml/machine-learning-databases/housing/">https://archive.ics.uci.edu/ml/machine-learning-databases/housing/</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>check the dependencies versions :</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Python : 3.8.12</p></li>
+<li><p>Pandas : 1.4.1</p></li>
+<li><p>Numpy : 1.22.2</p></li>
+<li><p>Matplotlib : 3.5.1</p></li>
+<li><p>Sklearn : 1.0.2</p></li>
+<li><p>seaborn : 0.11.2</p></li>
+<li><p>pytest : 7.1.1</p></li>
+<li><p>Sphinx : 4.5.0</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Open a terminal</p></li>
+<li><p>Go into the dedicated folder</p></li>
+<li><p>Run main.py : python main.py</p></li>
+<li><p>Follow the instructions:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Choose the dataset</p></li>
+<li><p>Choose the seed value for splitting dataset</p></li>
+<li><p>Choose the scaling feature method</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="project-structure">
+<h2>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>This project is composed of 3 packages and one main.</dt><dd><ul class="simple">
+<li><p>Data : package containing the datasets and data info</p></li>
+<li><p>Preprocessor : package containing the preprocessing methods</p></li>
+<li><p>Model : package containing the differents regression models</p></li>
+<li><p>main.py : main function of test program</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="structure">
+<h2>Structure<a class="headerlink" href="#structure" title="Permalink to this headline">¶</a></h2>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>bash
+<a href="#id5"><span class="problematic" id="id6">|</span></a>–M05_Project</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><a href="#id7"><span class="problematic" id="id8">|</span></a>—Data
+|     <a href="#id9"><span class="problematic" id="id10">|</span></a>-housing.data
+|     <a href="#id11"><span class="problematic" id="id12">|</span></a>-housing.names
+|     <a href="#id13"><span class="problematic" id="id14">|</span></a>-Index
+|     <a href="#id15"><span class="problematic" id="id16">|</span></a>-winequality.names
+|     <a href="#id17"><span class="problematic" id="id18">|</span></a>-winequality-red.csv
+|     <a href="#id19"><span class="problematic" id="id20">|</span></a>-winequality-white.csv
+|
+<a href="#id21"><span class="problematic" id="id22">|</span></a>—preprocessor
+|     <a href="#id23"><span class="problematic" id="id24">|</span></a>-preprocessing.py
+|
+<a href="#id25"><span class="problematic" id="id26">|</span></a>—model
+|     <a href="#id27"><span class="problematic" id="id28">|</span></a>-linear_regression.py
+|     <a href="#id29"><span class="problematic" id="id30">|</span></a>-regression_tree.py
+|
+<a href="#id31"><span class="problematic" id="id32">|</span></a>—analysis
+|     <a href="#id33"><span class="problematic" id="id34">|</span></a>-analyse.py
+|     <a href="#id35"><span class="problematic" id="id36">|</span></a>-correlationMatrix.png
+|
+<a href="#id37"><span class="problematic" id="id38">|</span></a>-main.py
+<a href="#id39"><span class="problematic" id="id40">|</span></a>-README.md</p>
+</div></blockquote>
+<p><a href="#id41"><span class="problematic" id="id42">``</span></a><a href="#id43"><span class="problematic" id="id44">`</span></a></p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">M05_Project</a><ul>
+<li><a class="reference internal" href="#datasets">Datasets</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#project-structure">Project structure</a></li>
+<li><a class="reference internal" href="#structure">Structure</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/README.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">M05_Project</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Laura Sidler, Jérôme Amos.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

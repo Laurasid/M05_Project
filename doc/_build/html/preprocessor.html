@@ -1,5 +1,6 @@
 
-<!DOCTYPE html>
+
+<!doctype html>
 
 <html>
   <head>
@@ -8,29 +9,45 @@
 
     <title>preprocessor package &#8212; Project M05 - Reproductibility 1.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="analysis package" href="analysis.html" />
-    <link rel="prev" title="model package" href="model.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="next" title="model package" href="model.html" />
+    <link rel="prev" title="main module" href="main.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model.html" title="model package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="main.html" title="main module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">preprocessor package</a></li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   <section id="preprocessor-package">
@@ -38,56 +55,151 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </section>
-<section id="preprocessor-preprocessing-module">
-<h2>preprocessor.preprocessing module<a class="headerlink" href="#preprocessor-preprocessing-module" title="Permalink to this headline">¶</a></h2>
+<section id="module-preprocessor.preprocessing">
+<span id="preprocessor-preprocessing-module"></span><h2>preprocessor.preprocessing module<a class="headerlink" href="#module-preprocessor.preprocessing" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="preprocessor.preprocessing.import_dataset">
+<span class="sig-prename descclassname"><span class="pre">preprocessor.preprocessing.</span></span><span class="sig-name descname"><span class="pre">import_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#preprocessor.preprocessing.import_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to import the dataset from an url (lacaly on the computer)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> – String for the file path</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataset</p>
+</dd>
+</dl>
+<p>:raise : Exception if dataset format isn’t .csv or .data</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="preprocessor.preprocessing.min_max_scaling">
+<span class="sig-prename descclassname"><span class="pre">preprocessor.preprocessing.</span></span><span class="sig-name descname"><span class="pre">min_max_scaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#preprocessor.preprocessing.min_max_scaling" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Function to scale the data set with a minMax Sklearn scaler</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dataset</strong> – Pandas dataframe</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result
+the dataset sclaled</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="preprocessor.preprocessing.normalize">
+<span class="sig-prename descclassname"><span class="pre">preprocessor.preprocessing.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#preprocessor.preprocessing.normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that normalize the dataset with sklearn normalizer
+:param dataset:</p>
+<blockquote>
+<div><p>Pandas dataframe</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>result
+the dataset normalized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="preprocessor.preprocessing.polynomial_scaling">
+<span class="sig-prename descclassname"><span class="pre">preprocessor.preprocessing.</span></span><span class="sig-name descname"><span class="pre">polynomial_scaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#preprocessor.preprocessing.polynomial_scaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to scale the data set with a polynomial Sklearn scaler</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dataset</strong> – Pandas dataframe</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result
+the dataset scaled</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="preprocessor.preprocessing.preprocessing">
+<span class="sig-prename descclassname"><span class="pre">preprocessor.preprocessing.</span></span><span class="sig-name descname"><span class="pre">preprocessing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_split</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_norm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#preprocessor.preprocessing.preprocessing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that make all the preprocessing on a given dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataset</strong> – Pandas dataframe</p></li>
+<li><p><strong>n_split</strong> – int : split number to choose the split technique : 1 : random_state = 30, 2 : random_state = 20, 3: random_state = 10</p></li>
+<li><p><strong>n_norm</strong> – <dl class="simple">
+<dt>int<span class="classifier">normalization number to choose the normalization technique</span><span class="classifier">1: StandardScaling, 2: MinMax,</span></dt><dd><p>3: Polynomial, 4: Normalizer</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>x_train, x_test, y_train, y_test</p>
+</dd>
+</dl>
+<p>:raise : Exception if the entry for scaling isn’t known (1,2,3,4)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="preprocessor.preprocessing.standard_scaling">
+<span class="sig-prename descclassname"><span class="pre">preprocessor.preprocessing.</span></span><span class="sig-name descname"><span class="pre">standard_scaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#preprocessor.preprocessing.standard_scaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to scale the data set with a Standard Sklearn scaler</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dataset</strong> – Pandas dataframe</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result
+the dataset scaled</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<section id="module-preprocessor">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-preprocessor" title="Permalink to this headline">¶</a></h2>
 </section>
 </section>
 
 
+            <div class="clearer"></div>
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">Project M05 - Reproductibility</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">M05_Project-main</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model.html">model package</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">preprocessor package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis.html">analysis package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="test_analysis_module.html">test_analysis_module module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="test_lin_reg_module.html">test_lin_reg_module module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="test_reg_tree_module.html">test_reg_tree_module module</a></li>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">preprocessor package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-preprocessor.preprocessing">preprocessor.preprocessing module</a></li>
+<li><a class="reference internal" href="#module-preprocessor">Module contents</a></li>
 </ul>
 </li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">M05_Project-main</a><ul>
-      <li>Previous: <a href="model.html" title="previous chapter">model package</a></li>
-      <li>Next: <a href="analysis.html" title="next chapter">analysis package</a></li>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="main.html"
+                          title="previous chapter">main module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="model.html"
+                          title="next chapter">model package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/preprocessor.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -98,32 +210,32 @@
     </div>
 </div>
 <script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2022, Laura Sidler, Jérôme Amos.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/preprocessor.rst.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="model.html" title="model package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="main.html" title="main module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">preprocessor package</a></li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Laura Sidler, Jérôme Amos.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
   </body>
 </html>

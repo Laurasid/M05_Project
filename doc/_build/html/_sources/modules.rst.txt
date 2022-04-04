@@ -3,11 +3,9 @@ M05_Project-main
 
 .. toctree::
    :maxdepth: 4
-   
+
+   analysis
    main
    model
    preprocessor
-   analysis
-   test_analysis_module
-   test_lin_reg_module
-   test_reg_tree_module
+   test
