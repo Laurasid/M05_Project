@@ -5,19 +5,20 @@ import analyse as an
 import numpy as np
 from sklearn import metrics
 
+"""
+This module is used to test methods of the analysis.analyse module
+"""
 
-####
-# test function analyse::mae (mean absolute error)
-####
 def test_mae():
     """
-    Function to test analyse::mae function (Mean Absolute Error).
+    Test analyse::mae function (Mean Absolute Error).
 
-    :param None
+    :param: None
 
     :return: None
 
-    :raise: AssertionError
+    :raise AssertionError:
+        the result is not the one that's expected
     """
     ###
     # mae = 1/n * sum(|xi-yi|)
@@ -54,18 +55,16 @@ def test_mae():
     '''
 
 
-####
-# test function analyse::r2 (R square)
-####
 def test_r2():
     """
-    Function to test analyse::r2 function (R-square).
+    Test analyse::r2 function (R-square).
 
-    :param None
+    :param: None
 
     :return: None
 
-    :raise: AssertionError
+    :raise AssertionError:
+        the result is not the one that's expected
     """
     ###
     # r^2 = 1 - sum(yi-yi^)^2 / sum(yi-y_mean)^2
@@ -106,18 +105,16 @@ def test_r2():
     '''
 
 
-####
-# test function analyse::rmse (root mean squared error)
-####
 def test_rmse():
     """
-    Function to test analyse::rmse function (Root Mean Square Error).
+    Test analyse::rmse function (Root Mean Square Error).
 
-    :param None
+    :param: None
 
     :return: None
 
-    :raise: AssertionError
+    :raise AssertionError:
+        the result is not the one that's expected
     """
     ###
     # rmse = sqrt(1/n * sum(yi^-yi)^2)

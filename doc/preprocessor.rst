@@ -1,9 +1,6 @@
 preprocessor package
 ====================
 
-Submodules
-----------
-
 preprocessor.preprocessing module
 ---------------------------------
 
@@ -12,10 +9,4 @@ preprocessor.preprocessing module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: preprocessor
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. warning:: The files from which we want to extract datasets must be .csv or .data

@@ -4,10 +4,17 @@ from model import regression_tree as rt
 from analysis import analyse
 import argparse
 import sys
+
+
 if __name__ == "__main__":
+    """
+    Run the program as instructed in the README. At each steps an action is expected from user to choose dataset, 
+    split random seed, scaling method and model type. Each stage display a number of option and the user is invited
+    to choose one of those.
+    """
 
     parser = argparse.ArgumentParser(description='Run main.py to get Mae, R2, rmse and a correlation matrix. '
-                                                 'Mae, R2, rmse will be displaied on the shell, '
+                                                 'Mae, R2, rmse will be displayed on the shell, '
                                                  'The correlation matrix is saved as .png into /analysis/. '
                                                  'During the process you will be asked to enter some values to configurate the model.')
     args = parser.parse_args()

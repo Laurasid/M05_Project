@@ -18,8 +18,8 @@
     <script src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="preprocessor package" href="preprocessor.html" />
-    <link rel="prev" title="main module" href="main.html" />
+    <link rel="next" title="analysis package" href="analysis.html" />
+    <link rel="prev" title="preprocessor package" href="preprocessor.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
     <script src="_static/css3-mediaqueries.js"></script>
@@ -35,13 +35,12 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="preprocessor.html" title="preprocessor package"
+          <a href="analysis.html" title="analysis package"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="main.html" title="main module"
+          <a href="preprocessor.html" title="preprocessor package"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">M05_Project-main</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">model package</a></li> 
       </ul>
     </div>  
@@ -61,17 +60,17 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="model.linear_regression.predict">
 <span class="sig-prename descclassname"><span class="pre">model.linear_regression.</span></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regressor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.linear_regression.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to make a prediction on a set of data</p>
+<dd><p>Predict labels according to the test values x_test</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>regressor</strong> – </p></li>
-<li><p><strong>x_test</strong> – </p></li>
+<li><p><strong>x_test</strong> (<em>array-like</em>) – values from the test dataset</p></li>
+<li><p><strong>regressor</strong> (<em>LinearRegression</em>) – a linear model regressor. Typically, the one returned by the train method</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>y_pred
-Predicted Value</p>
+<dd class="field-even"><p>(DataFrame) -
+the labels predicted for the test values</p>
 </dd>
 </dl>
 </dd></dl>
@@ -79,13 +78,19 @@ Predicted Value</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="model.linear_regression.train">
 <span class="sig-prename descclassname"><span class="pre">model.linear_regression.</span></span><span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.linear_regression.train" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to train a linear regression model
-:param x_train:
-:param y_train:
-:return: regressor</p>
-<blockquote>
-<div><p>sklearn regressor of the linear model</p>
-</div></blockquote>
+<dd><p>Train a linear regression-type model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_train</strong> (<em>array-like</em>) – values from the train dataset</p></li>
+<li><p><strong>y_train</strong> (<em>array-like</em>) – labels that correspond to the values from the train dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(LinearRegression) -
+sklearn regressor of the linear model</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -94,19 +99,37 @@ Predicted Value</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="model.regression_tree.predict">
 <span class="sig-prename descclassname"><span class="pre">model.regression_tree.</span></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regressor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_test</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.regression_tree.predict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to train a regression tree model
-:param DecisionTreeRegressor regressor: regressor
-:param array-like x_test: test values
-:return: array-like y_pred: predicted values</p>
+<dd><p>Predict labels according to the test values x_test</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regressor</strong> (<em>DecisionTreeRegressor</em>) – a decision tree model regressor. Typically, the one returned by the train method</p></li>
+<li><p><strong>x_test</strong> (<em>array-like</em>) – values from the test dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(array-like) -
+the labels predicted for the test values</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="model.regression_tree.train">
 <span class="sig-prename descclassname"><span class="pre">model.regression_tree.</span></span><span class="sig-name descname"><span class="pre">train</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#model.regression_tree.train" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to train a regression tree model
-:param array-like x_train: train values
-:param array-like y_train: train labels
-:return: DecisionTreeRegressor regressor: sklearn regressor of the linear model</p>
+<dd><p>Train a regression tree-type model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_train</strong> (<em>array-like</em>) – values from the train dataset</p></li>
+<li><p><strong>y_train</strong> (<em>array-like</em>) – labels that correspond to the values from the train dataset</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>:return (DecisionTreeRegressor) -</dt><dd><p>sklearn regressor of the model</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -137,13 +160,13 @@ Predicted Value</p>
   </div>
   <div>
     <h4>Previous topic</h4>
-    <p class="topless"><a href="main.html"
-                          title="previous chapter">main module</a></p>
+    <p class="topless"><a href="preprocessor.html"
+                          title="previous chapter">preprocessor package</a></p>
   </div>
   <div>
     <h4>Next topic</h4>
-    <p class="topless"><a href="preprocessor.html"
-                          title="next chapter">preprocessor package</a></p>
+    <p class="topless"><a href="analysis.html"
+                          title="next chapter">analysis package</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -176,13 +199,12 @@ Predicted Value</p>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="preprocessor.html" title="preprocessor package"
+          <a href="analysis.html" title="analysis package"
              >next</a> |</li>
         <li class="right" >
-          <a href="main.html" title="main module"
+          <a href="preprocessor.html" title="preprocessor package"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="modules.html" >M05_Project-main</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">model package</a></li> 
       </ul>
     </div>

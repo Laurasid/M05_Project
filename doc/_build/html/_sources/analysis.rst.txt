@@ -1,21 +1,11 @@
 analysis package
 ================
 
-Submodules
-----------
-
 analysis.analyse module
 -----------------------
 
 .. automodule:: analysis.analyse
-   :members:
+   :members: mae, r2, rmse, correlation_matrix
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: analysis
-   :members:
-   :undoc-members:
-   :show-inheritance:

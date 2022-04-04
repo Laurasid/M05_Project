@@ -18,6 +18,7 @@
     <script src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="analysis package" href="analysis.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--[if lt IE 9]>
     <script src="_static/css3-mediaqueries.js"></script>
@@ -32,6 +33,9 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="analysis.html" title="analysis package"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">test package</a></li> 
       </ul>
@@ -52,14 +56,16 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="test.test_analysis_module.test_mae">
 <span class="sig-prename descclassname"><span class="pre">test.test_analysis_module.</span></span><span class="sig-name descname"><span class="pre">test_mae</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_analysis_module.test_mae" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to test analyse::mae function (Mean Absolute Error).</p>
-<p>:param None</p>
+<dd><p>Test analyse::mae function (Mean Absolute Error).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Param</dt>
 <dd class="field-odd"><p>None</p>
 </dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>AssertionError</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – the result is not the one that’s expected</p>
 </dd>
 </dl>
 </dd></dl>
@@ -67,14 +73,16 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="test.test_analysis_module.test_r2">
 <span class="sig-prename descclassname"><span class="pre">test.test_analysis_module.</span></span><span class="sig-name descname"><span class="pre">test_r2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_analysis_module.test_r2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to test analyse::r2 function (R-square).</p>
-<p>:param None</p>
+<dd><p>Test analyse::r2 function (R-square).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Param</dt>
 <dd class="field-odd"><p>None</p>
 </dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>AssertionError</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – the result is not the one that’s expected</p>
 </dd>
 </dl>
 </dd></dl>
@@ -82,14 +90,16 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="test.test_analysis_module.test_rmse">
 <span class="sig-prename descclassname"><span class="pre">test.test_analysis_module.</span></span><span class="sig-name descname"><span class="pre">test_rmse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_analysis_module.test_rmse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to test analyse::rmse function (Root Mean Square Error).</p>
-<p>:param None</p>
+<dd><p>Test analyse::rmse function (Root Mean Square Error).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Param</dt>
 <dd class="field-odd"><p>None</p>
 </dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>AssertionError</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – the result is not the one that’s expected</p>
 </dd>
 </dl>
 </dd></dl>
@@ -100,14 +110,16 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="test.test_lin_reg_module.test_lin_reg">
 <span class="sig-prename descclassname"><span class="pre">test.test_lin_reg_module.</span></span><span class="sig-name descname"><span class="pre">test_lin_reg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_lin_reg_module.test_lin_reg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to test linear regression module. Test for shape and type of values returned.</p>
-<p>:param None</p>
+<dd><p>Test shapes and instance of the object returned by model.linear_regression methods.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Param</dt>
 <dd class="field-odd"><p>None</p>
 </dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>AssertionError</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – the result is not the one that’s expected. Shapes or instance differ</p>
 </dd>
 </dl>
 </dd></dl>
@@ -118,14 +130,16 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="test.test_reg_tree_module.test_reg_tree">
 <span class="sig-prename descclassname"><span class="pre">test.test_reg_tree_module.</span></span><span class="sig-name descname"><span class="pre">test_reg_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.test_reg_tree_module.test_reg_tree" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function to test regression tree module. Test for shape and type of values returned.</p>
-<p>:param None</p>
+<dd><p>Test shapes and instance of the object returned by model.regression_tree methods.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Param</dt>
 <dd class="field-odd"><p>None</p>
 </dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>AssertionError</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – the result is not the one that’s expected. Shapes or instance differ</p>
 </dd>
 </dl>
 </dd></dl>
@@ -157,6 +171,11 @@
 </ul>
 
   </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="analysis.html"
+                          title="previous chapter">analysis package</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -187,6 +206,9 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="analysis.html" title="analysis package"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">test package</a></li> 
       </ul>

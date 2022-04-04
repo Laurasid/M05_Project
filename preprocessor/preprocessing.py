@@ -9,24 +9,22 @@ from sklearn.preprocessing import (
 from sklearn.model_selection import train_test_split
 
 """
-1. import dataset
-2. take care of missing data
-3. encode categorical data
-4. split train test
-5. feature scaling
+This module is used to preprocess the data before they can be used for the model training.
 """
-
 
 def import_dataset(url):
     """
-    Function to import the dataset from an url (lacaly on the computer)
+    Import the dataset from a path (locally on the computer).
+    The file extension must be .csv or .data
 
-    :param url:
-        String for the file path
+    :param string url:
+        the path where to find the dataset.
 
-    :return: dataset
+    :return: (DataFrame) -
+        the dataset contained in the URL. Pandas DataFrame object.
 
-    :raise : Exception if dataset format isn't .csv or .data
+    :raise Exception:
+        the extension of the file isn't supported
     """
     # different file extension : .csv and .data
     file_extension = url.split(".")[1]
@@ -61,17 +59,17 @@ def import_dataset(url):
     return dataset
 
 
-# Normalize the data with standard scaling
-###
+
 def standard_scaling(dataset):
     """
-    Function to scale the data set with a Standard Sklearn scaler
+    Scale the dataset with a standard Sklearn scaler (StandardScaler object)
 
-    :param dataset:
-        Pandas dataframe
+    :param DataFrame dataset:
+        the dataset to scale
 
-    :return: result
-        the dataset scaled
+    :return: (DataFrame) -
+        the scaled dataset
+
     """
 
     scaler = StandardScaler()
@@ -79,18 +77,17 @@ def standard_scaling(dataset):
     return result
 
 
-###
-# Normalize with min-max scaler
-###
+
 def min_max_scaling(dataset):
     """
-     Function to scale the data set with a minMax Sklearn scaler
+    Scale the dataset with a min-max Sklearn scaler (MinMaxScaler object)
 
-    :param dataset:
-        Pandas dataframe
+    :param DataFrame dataset:
+        the dataset to scale
 
-    :return: result
-        the dataset sclaled
+    :return: (DataFrame) -
+        the scaled dataset
+
     """
 
     scaler = MinMaxScaler()
@@ -98,18 +95,16 @@ def min_max_scaling(dataset):
     return result
 
 
-###
-# Normalize with polynomial scaler
-###
 def polynomial_scaling(dataset):
     """
-    Function to scale the data set with a polynomial Sklearn scaler
+    Scale the dataset with a polynomial Sklearn scaler (PolynomialFeatures object)
 
-    :param dataset:
-        Pandas dataframe
+    :param DataFrame dataset:
+        the dataset to scale
 
-    :return: result
-        the dataset scaled
+    :return: (DataFrame) -
+        the scaled dataset
+
     """
 
     scaler = PolynomialFeatures()
@@ -117,17 +112,16 @@ def polynomial_scaling(dataset):
     return result
 
 
-###
-#
-###
 def normalize(dataset):
     """
-    Function that normalize the dataset with sklearn normalizer
-    :param dataset:
-        Pandas dataframe
+    Normalize the dataset with sklearn normalizer (Normalizer object)
 
-    :return: result
-        the dataset normalized
+    :param DataFrame dataset:
+        the dataset to normalize
+
+    :return: (DataFrame) -
+        the normalized dataset
+
     """
 
     scaler = Normalizer()
@@ -135,23 +129,30 @@ def normalize(dataset):
     return result
 
 
-###
-#
-###
 def preprocessing(dataset, n_split, n_norm):
     """
-    Function that make all the preprocessing on a given dataset
+    Preprocess the given dataset.
 
-    :param dataset:
-        Pandas dataframe
-    :param n_split:
-        int : split number to choose the split technique : 1 : random_state = 30, 2 : random_state = 20, 3: random_state = 10
-    :param n_norm:
-        int : normalization number to choose the normalization technique : 1: StandardScaling, 2: MinMax,
-                                                                          3: Polynomial, 4: Normalizer
-    :return: x_train, x_test, y_train, y_test
+    :param DataFrame dataset:
+        the dataset to preprocess
+    :param int n_split:
+        determine the split technique.\n
+        n_split = 1 : random_state = 30 \n
+        n_split = 2 : random_state = 20 \n
+        n_split = 3 : random_state = 10 \n
+    :param int n_norm:
+        determine the normalization technique.\n
+        n_norm = 1 : Standard scaling \n
+        n_norm = 2 : MinMax scaling \n
+        n_norm = 3 : Polynomial scaling \n
+        n_norm = 4 : Normalizer \n
 
-    :raise : Exception if the entry for scaling isn't known (1,2,3,4)
+    :return: (array-like) -
+        four array-like that correspond to train values and labels and test values and labels.
+        These array-like can be directly used in model modules.
+
+    :raise Exception:
+        the entry for splitting or scaling isn't known
     """
     data = dataset.dropna(axis="index")
     data = data.drop_duplicates()
