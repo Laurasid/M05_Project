@@ -15,7 +15,7 @@ def mae(y_test, y_pred):
     :param array-like y_pred:
                 labels that are predicted by the model based on values of train set
 
-    :return float:
+    :return:
                 the mean absolute error
 
     :raise Exception:
@@ -36,7 +36,7 @@ def r2(y_test, y_pred):
     :param array-like y_pred:
                 labels that are predicted by the model based on values of train set
 
-    :return float:
+    :return:
                 r-square score
 
     :raise Exception:
@@ -56,7 +56,7 @@ def rmse(y_test, y_pred):
     :param array-like y_pred:
                 labels that are predicted by the model based on values of train set
 
-    :return float:
+    :return:
                 the root-mean-square error
 
     :raise Exception:
@@ -71,7 +71,7 @@ def correlation_matrix(dataset):
     """
     Create a correlation matrix with seaborn lib, save it as png into ./analysis/
     Once the correlation matrix is created it's shown on screen.
-    :param DataFrame dataset:
+    :param dataset:
                 Pandas DataFrame object
 
     :return: None
