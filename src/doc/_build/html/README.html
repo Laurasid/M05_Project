@@ -1,0 +1,202 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>M05_Project &#8212; Project M05 - Reproductibility 1.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="preprocessor package" href="preprocessor.html" />
+    <link rel="prev" title="Welcome to Project M05 - Reproductibility’s documentation!" href="index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="preprocessor.html" title="preprocessor package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Project M05 - Reproductibility’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">M05_Project</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="m05-project">
+<h1>M05_Project<a class="headerlink" href="#m05-project" title="Permalink to this headline">¶</a></h1>
+<p>This project has been developed during the M05 module of Msc AI at Idiap. Its objective is to experiment with the principles of reproductibility in science.</p>
+<section id="datasets">
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>For this project we use three different datasets. The datasets are allready imported into project under the folder data.</dt><dd><ul class="simple">
+<li><p>Two dataset for wine quality (red-white) that could be found here : <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/wine+quality">https://archive.ics.uci.edu/ml/datasets/wine+quality</a></p></li>
+<li><p>One dataset for housing price that can be found here : <a class="reference external" href="https://archive.ics.uci.edu/ml/machine-learning-databases/housing/">https://archive.ics.uci.edu/ml/machine-learning-databases/housing/</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>You can install our program in two ways :</dt><dd><ol class="arabic simple">
+<li><p>from git clone if you just want to run the main program</p></li>
+<li><p>from pip install &lt;package_name&gt; if you want to use our modules in a custom way</p></li>
+</ol>
+</dd>
+</dl>
+<section id="installation-from-git-clone">
+<h3>Installation from git clone<a class="headerlink" href="#installation-from-git-clone" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you have at least Python 3.8.9 to run the program</p>
+</div>
+<p>We encourage you to make a virtual environnement before installing the dependencies.</p>
+<dl class="simple">
+<dt>Do the following :</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">git</span> <span class="pre">clone</span> <span class="pre">`git&#64;github.com:Laurasid/M05_Project.git`</span></code></p></li>
+<li><p>go to the folder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">main.py</span></code></p></li>
+<li><p>follow the instructions</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="installation-from-pip">
+<h3>Installation from pip<a class="headerlink" href="#installation-from-pip" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>Do the following :</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&lt;package_name&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">import</span> <span class="pre">&lt;wanted_package&gt;</span></code></p></li>
+<li><p>or <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">from</span> <span class="pre">&lt;wanted_package&gt;</span> <span class="pre">import</span> <span class="pre">&lt;wanted_method&gt;</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p>Enjoy !</p>
+<p>The use of each methods is specified in the dedicated documentation index.</p>
+</section>
+</section>
+<section id="project-structure">
+<h2>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>This project is composed of four packages and one main.</dt><dd><ul class="simple">
+<li><p>Data : package containing the datasets and data info</p></li>
+<li><p>Preprocessor : package containing the preprocessing methods</p></li>
+<li><p>Model : package containing the differents regression models</p></li>
+<li><p>Analysis : package containing the loss function methods</p></li>
+<li><p>main.py : run the program</p></li>
+</ul>
+</dd>
+</dl>
+<img alt="src/doc/tree_image.png" src="src/doc/tree_image.png" />
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">M05_Project</a><ul>
+<li><a class="reference internal" href="#datasets">Datasets</a></li>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#installation-from-git-clone">Installation from git clone</a></li>
+<li><a class="reference internal" href="#installation-from-pip">Installation from pip</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#project-structure">Project structure</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Welcome to Project M05 - Reproductibility’s documentation!</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="preprocessor.html"
+                          title="next chapter">preprocessor package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/README.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="preprocessor.html" title="preprocessor package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Project M05 - Reproductibility’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Project M05 - Reproductibility 1.1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">M05_Project</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Laura Sidler, Jérôme Amos.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>
