@@ -2,53 +2,66 @@
 M05_Project
 ===========
 
-This project has been developed during the M05 module of Msc AI at Idiap. Its objective is to experiment with the principles of reproductibility in science.
-
 Datasets
 ========
-For this project we use three different datasets. The datasets are allready imported into project under the folder data.
+For this project we use three different dataset. The datasets are allready imported into project under the folder data.
   - Two dataset for wine quality (red-white) that could be found here : https://archive.ics.uci.edu/ml/datasets/wine+quality
   - One dataset for housing price that can be found here : https://archive.ics.uci.edu/ml/machine-learning-databases/housing/ 
 
 Installation
 ============
-You can install our program in two ways : 
-  1. from git clone if you just want to run the main program
-  2. from pip install <package_name> if you want to use our modules in a custom way
+1. check the dependencies versions : 
+  - Python : 3.8.12
+  - Pandas : 1.4.1
+  - Numpy : 1.22.2
+  - Matplotlib : 3.5.1
+  - Sklearn : 1.0.2
+  - seaborn : 0.11.2
+  - pytest : 7.1.1
+  - Sphinx : 4.5.0
 
-Installation from git clone
----------------------------
-.. Note:: Make sure you have at least Python 3.8.9 to run the program
-
-We encourage you to make a virtual environnement before installing the dependencies.
-
-Do the following : 
-  - ``$ git clone `git@github.com:Laurasid/M05_Project.git```
-  - go to the folder
-  - ``$ pip install -r requirements.txt``
-  - ``$ python main.py``
-  - follow the instructions
-
-Installation from pip
----------------------
-Do the following : 
-  - ``$ pip install <package_name>``
-  - ``$ python``
-  - ``$ import <wanted_package>``
-  - or ``$ from <wanted_package> import <wanted_method>``
-
-Enjoy !
-
-The use of each methods is specified in the dedicated documentation index.
+2. Open a terminal
+3. Go into the dedicated folder
+4. Run main.py : python main.py
+5. Follow the instructions:
+  - Choose the dataset
+  - Choose the seed value for splitting dataset
+  - Choose the scaling feature method
 
 Project structure
 =================
-This project is composed of four packages and one main. 
+This project is composed of 3 packages and one main. 
   - Data : package containing the datasets and data info
   - Preprocessor : package containing the preprocessing methods
   - Model : package containing the differents regression models
-  - Analysis : package containing the loss function methods
-  - main.py : run the program
+  - main.py : main function of test program
+
+Structure
+=========
   
-.. image:: ./src/doc/tree_image.png
+```bash
+|--M05_Project
+    |
+    |---Data
+    |     |-housing.data
+    |     |-housing.names
+    |     |-Index
+    |     |-winequality.names
+    |     |-winequality-red.csv
+    |     |-winequality-white.csv
+    |
+    |---preprocessor
+    |     |-preprocessing.py
+    |
+    |---model
+    |     |-linear_regression.py
+    |     |-regression_tree.py
+    |
+    |---analysis
+    |     |-analyse.py
+    |     |-correlationMatrix.png
+    |
+    |-main.py
+    |-README.md
+```
 
