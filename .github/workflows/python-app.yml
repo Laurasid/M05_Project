@@ -30,7 +30,6 @@ jobs:
         
     - name: Install dependencies for Python
       run: |
-          pip install .
           pip install -r ./requirements.txt
         
     - name: Lint with flake8
