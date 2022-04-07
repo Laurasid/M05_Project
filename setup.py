@@ -19,7 +19,6 @@ setup(
 
     license="MIT",
     author="Laura Sidler, Jerome Amos",
-    author_email="sidler@icare.ch","amos@icare.ch",
 
     long_description=long_desc,
     long_description_content_type="text/x-rst",
