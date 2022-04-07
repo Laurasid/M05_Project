@@ -28,7 +28,7 @@ setup(
 
     install_requires=load_requirements("requirements.txt"),
 
-    entry_points={"console_scripts": ["run = src.__main__:main"]},
+    entry_points={"console_scripts": ["run = src:main"]},
 
     classifiers=[
         "Intended Audience :: Developers",
