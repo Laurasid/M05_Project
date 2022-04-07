@@ -11,7 +11,7 @@ except IOError:
 
 setup(
     name="repro_m05",
-    version="1.1.0",
+    version="1.1.1",
 
     description="Project on reproductibility in science",
 
@@ -19,7 +19,7 @@ setup(
 
     license="MIT",
     author="Laura Sidler, Jerome Amos",
-    author_email="Laura.sidler.92@gmail.com",
+    author_email="Laura.sidler.92@gmail.com","",
 
     long_description=long_desc,
     long_description_content_type="text/x-rst",
@@ -29,7 +29,7 @@ setup(
 
     install_requires=load_requirements("requirements.txt"),
 
-    entry_points={"console_scripts": ["src-main = src.__main__:main"]},
+    entry_points={"console_scripts": ["run = src.__main__:main"]},
 
     classifiers=[
         "Intended Audience :: Developers",
