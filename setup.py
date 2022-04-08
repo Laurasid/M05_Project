@@ -11,7 +11,7 @@ except IOError:
 
 setup(
     name="m05",
-    version="1.0.0",
+    version="1.1.2",
 
     description="Project on reproductibility in science",
 
@@ -29,7 +29,7 @@ setup(
 
     install_requires=load_requirements("requirements.txt"),
 
-    entry_points={"console_scripts": ["run = src:main"]},
+    entry_points={"console_scripts": ["run = src.main:main"]},
 
     classifiers=[
         "Intended Audience :: Developers",

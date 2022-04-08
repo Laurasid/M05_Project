@@ -6,7 +6,7 @@ import argparse
 import sys
 
 
-if __name__ == "__main__":
+def main():
     """
     Run the program as instructed in the README. At each steps an action is expected from user to choose dataset, 
     split random seed, scaling method and model type. Each stage display a number of option and the user is invited
