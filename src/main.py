@@ -1,9 +1,11 @@
+import os
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src/'))
 from preprocessor import preprocessing as pp
 from model import linear_regression as lr
 from model import regression_tree as rt
 from analysis import analyse
 import argparse
-import sys
 
 
 def main():
