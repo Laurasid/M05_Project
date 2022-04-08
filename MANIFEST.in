@@ -1,2 +1,2 @@
-include LICENSE.txt README.rst requirements.txt src/Data/housing.data src/Data/housing.names src/Data/winequality-red.csv src/Data/winequality-white.csv src/Data/winequality.names
+include LICENSE.txt README.rst requirements.txt src/analysis/ src/Data/housing.data src/Data/housing.names src/Data/winequality-red.csv src/Data/winequality-white.csv src/Data/winequality.names
 prune test/

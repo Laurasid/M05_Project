@@ -11,7 +11,7 @@ except IOError:
 
 setup(
     name="m05",
-    version="1.1.9",
+    version="1.2.0",
 
     description="Project on reproductibility in science",
 

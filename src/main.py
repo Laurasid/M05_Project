@@ -44,11 +44,11 @@ def main():
     n_dataset = int(input())
     url = ""
     if n_dataset == 1:
-        url = "Data/winequality-red.csv"
+        url = "src/Data/winequality-red.csv"
     elif n_dataset == 2:
-        url = "Data/winequality-white.csv"
+        url = "src/Data/winequality-white.csv"
     elif n_dataset == 3:
-        url = "Data/housing.data"
+        url = "src/Data/housing.data"
     else:
         raise Exception("No dataset for that entry")
 
