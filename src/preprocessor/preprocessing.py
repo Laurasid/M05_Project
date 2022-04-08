@@ -30,6 +30,7 @@ def import_dataset(url):
     """
     # different file extension : .csv and .data
     file_extension = url.split(".")[1]
+    print(file_extension)
     # different treatment for csv and for .data
     if file_extension == "csv":
         dataset = pd.read_csv(url, sep=";")
