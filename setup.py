@@ -29,7 +29,7 @@ setup(
 
     install_requires=load_requirements("requirements.txt"),
 
-    entry_points={"console_scripts": ["run = src.main:main"]},
+    entry_points={"console_scripts": ["m05-run = src.main:main"]},
 
     classifiers=[
         "Intended Audience :: Developers",
