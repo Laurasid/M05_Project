@@ -14,7 +14,6 @@ Welcome to Project M05 - Reproductibility's documentation!
    preprocessor
    model
    analysis
-   test
    
 
 Indices and tables
