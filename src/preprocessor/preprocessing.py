@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import os
 from sklearn.preprocessing import (
     StandardScaler,
     MinMaxScaler,
@@ -30,9 +31,11 @@ def import_dataset(url):
     """
     # different file extension : .csv and .data
     file_extension = url.split(".")[1]
+    filename, file_extension = os.path.splitext(url)
     print(file_extension)
+
     # different treatment for csv and for .data
-    if file_extension == "csv":
+    if file_extension == ".csv":
         dataset = pd.read_csv(url, sep=";")
     elif file_extension == "data":
         # load text file
@@ -57,8 +60,8 @@ def import_dataset(url):
                 "MEDV",
             ],
         )
-    else:
-        raise Exception("This dataset extension cannot be use. Use .csv or .data file.")
+    #else:
+        #raise Exception("This dataset extension cannot be use. Use .csv or .data file.")
     return dataset
 
 
