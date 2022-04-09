@@ -41,7 +41,7 @@ jobs:
         
     - name: Test with pytest
       run: |
-        coverage run -m --omit=main --source src pytest test -vv
+        coverage run -m --omit=src/main.py --source src pytest test -vv
         coverage report
     
     - name : Upload coverage to coveralls.io
