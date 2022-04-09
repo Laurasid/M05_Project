@@ -5,7 +5,7 @@
 .. image:: https://img.shields.io/badge/github-project-0000c0.svg
    :target: https://github.com/Laurasid/M05_Project/tree/dist
 .. image:: https://img.shields.io/github/license/Naereen/StrapDown.js.svg
-   :target: https://github.com/Laurasid/M05_Project/LICENSE.txt
+   :target: https://github.com/Laurasid/M05_Project/blob/dist/LICENSE.txt
 
 
 ===========
