@@ -1,5 +1,5 @@
 .. image:: https://img.shields.io/badge/docs-latest-orange.svg
-   :target: https://github.com/Laurasid/M05_Project.git/src/doc/_build/html/index.html
+   :target: https://github.com/Laurasid/M05_Project.git/src/doc/build/html/index.html
 .. image:: https://github.com/Laurasid/M05_Project/actions/workflows/python-app.yml/badge.svg?branch=dist
    :target: https://github.com/Laurasid/M05_Project/actions/workflows/python-app.yml
 .. image:: https://img.shields.io/badge/github-project-0000c0.svg
