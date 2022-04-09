@@ -20,7 +20,6 @@ For this project we use three different datasets. The datasets are already impor
 
 Installation
 ============
-
 .. Note:: Make sure you have at least Python 3.8.9 to run the program
 
 We encourage you to make a virtual environnement before installing the dependencies.
