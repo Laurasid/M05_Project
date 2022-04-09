@@ -57,5 +57,5 @@ jobs:
         # generate doc from .py files
         sphinx-apidoc -o ./ ./ ./test/
         # build
-        sphinx-build ./src/doc ./src/doc/_build/html
+        sphinx-build ./doc ./doc/_build/html
         
