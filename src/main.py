@@ -43,11 +43,11 @@ def main():
     n_dataset = int(input())
     url = ""
     if n_dataset == 1:
-        url = pkg_resources.resource_filename(__name__, "Data/winequality-red.csv")
+        url = "Data/winequality-red.csv"
     elif n_dataset == 2:
-        url = pkg_resources.resource_filename(__name__, "Data/winequality-white.csv")
+        url = "Data/winequality-white.csv"
     elif n_dataset == 3:
-        url = pkg_resources.resource_filename(__name__, "Data/housing.data")
+        url = "Data/housing.data"
     else:
         raise Exception("No dataset for that entry")
 
