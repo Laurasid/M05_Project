@@ -1,12 +1,11 @@
-.. image:: https://img.shields.io/badge/docs-latest-orange.svg
-   :target: https://github.com/Laurasid/M05_Project.git/src/doc/build/html/index.html
-.. image:: https://github.com/Laurasid/M05_Project/actions/workflows/python-app.yml/badge.svg?branch=dist
+ .. image:: https://github.com/Laurasid/M05_Project/actions/workflows/python-app.yml/badge.svg?branch=dist
    :target: https://github.com/Laurasid/M05_Project/actions/workflows/python-app.yml
 .. image:: https://img.shields.io/badge/github-project-0000c0.svg
    :target: https://github.com/Laurasid/M05_Project/tree/dist
 .. image:: https://img.shields.io/github/license/Naereen/StrapDown.js.svg
    :target: https://github.com/Laurasid/M05_Project/blob/dist/LICENSE.txt
-
+.. image:: https://badgen.net/github/last-commit/Naereen/Strapdown.js
+   :target: https://github.com/Laurasid/M05_Project/actions/commit/
 
 ===========
 M05_Project
