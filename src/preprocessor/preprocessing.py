@@ -71,7 +71,7 @@ def standard_scaling(dataset):
     :param DataFrame dataset:
         the dataset to scale
 
-    :return: (DataFrame) -
+    :return: (array-like) -
         the scaled dataset
     """
 
@@ -88,7 +88,7 @@ def min_max_scaling(dataset):
     :param DataFrame dataset:
         the dataset to scale
 
-    :return: (DataFrame) -
+    :return: (array-like) -
         the scaled dataset
     """
 
@@ -104,7 +104,7 @@ def polynomial_scaling(dataset):
     :param DataFrame dataset:
         the dataset to scale
 
-    :return: (DataFrame) -
+    :return: (array-like) -
         the scaled dataset
     """
 
@@ -120,7 +120,7 @@ def normalize(dataset):
     :param DataFrame dataset:
         the dataset to normalize
 
-    :return: (DataFrame) -
+    :return: (array-like) -
         the normalized dataset
     """
 
