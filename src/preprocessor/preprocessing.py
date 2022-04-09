@@ -30,14 +30,12 @@ def import_dataset(url):
     .. warning:: The files from which we want to extract datasets must be .csv or .data
     """
     # different file extension : .csv and .data
-    file_extension = url.split(".")[1]
     filename, file_extension = os.path.splitext(url)
-    print(file_extension)
 
     # different treatment for csv and for .data
     if file_extension == ".csv":
         dataset = pd.read_csv(url, sep=";")
-    elif file_extension == "data":
+    elif file_extension == ".data":
         # load text file
         text = np.loadtxt(url)
         # turn text file as pandas dataframe
@@ -73,7 +71,7 @@ def standard_scaling(dataset):
     :param DataFrame dataset:
         the dataset to scale
 
-    :return: (DataFrame) -
+    :return: (array-like) -
         the scaled dataset
     """
 
@@ -90,7 +88,7 @@ def min_max_scaling(dataset):
     :param DataFrame dataset:
         the dataset to scale
 
-    :return: (DataFrame) -
+    :return: (array-like) -
         the scaled dataset
     """
 
@@ -106,7 +104,7 @@ def polynomial_scaling(dataset):
     :param DataFrame dataset:
         the dataset to scale
 
-    :return: (DataFrame) -
+    :return: (array-like) -
         the scaled dataset
     """
 
@@ -122,7 +120,7 @@ def normalize(dataset):
     :param DataFrame dataset:
         the dataset to normalize
 
-    :return: (DataFrame) -
+    :return: (array-like) -
         the normalized dataset
     """
 

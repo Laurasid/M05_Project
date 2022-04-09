@@ -1,11 +1,12 @@
-.. image:: https://img.shields.io/badge/docs-latest-orange.svg
-   :target: https://github.com/Laurasid/M05_Project.git/src/doc/build/html/index.html
-.. image:: https://github.com/Laurasid/M05_Project/actions/workflows/python-app.yml/badge.svg?branch=dist
+.. image:: https://github.com/Laurasid/M05_Project/actions/workflows/python-app.yml/badge.svg?branch=main
    :target: https://github.com/Laurasid/M05_Project/actions/workflows/python-app.yml
 .. image:: https://img.shields.io/badge/github-project-0000c0.svg
    :target: https://github.com/Laurasid/M05_Project/tree/dist
 .. image:: https://img.shields.io/github/license/Naereen/StrapDown.js.svg
    :target: https://github.com/Laurasid/M05_Project/blob/dist/LICENSE.txt
+.. image:: https://coveralls.io/repos/github/Laurasid/M05_Project/badge.svg?branch=main
+   :target: https://coveralls.io/github/Laurasid/M05_Project?branch=main
+
 
 
 ===========
@@ -22,30 +23,16 @@ For this project we use three different datasets. The datasets are already impor
 
 Installation
 ============
-You can install our program in two ways : 
-  1. from git clone if you just want to run the main program
-  2. from pip install <package_name> if you want to use our modules in a custom way
-
-Installation from git clone
----------------------------
 .. Note:: Make sure you have at least Python 3.8.9 to run the program
 
 We encourage you to make a virtual environnement before installing the dependencies.
 
 Do the following : 
-  - ``$ git clone `git@github.com:Laurasid/M05_Project.git```
+  - ``$ git clone `https://github.com/Laurasid/M05_Project.git```
   - go to the folder
-  - ``$ pip install -r requirements.txt``
-  - ``$ python main.py``
+  - ``$ pip install .``
+  - ``$ m05-run``
   - follow the instructions
-
-Installation from pip
----------------------
-Do the following : 
-  - ``$ pip install -i https://test.pypi.org/simple/ repro-m05==1.1.1``
-  - ``$ python``
-  - ``$ import <wanted_package>``
-  - or ``$ from <wanted_package> import <wanted_method>``
 
 Enjoy !
 
