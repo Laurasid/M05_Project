@@ -7,9 +7,6 @@ from model import regression_tree as rt
 from analysis import analyse
 import argparse
 
-import pkg_resources
-DATAFILE = pkg_resources.resource_filename(__name__, "data.csv")
-
 def main():
     """
     Run the program as instructed in the README. At each steps an action is expected from user to choose dataset, 

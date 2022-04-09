@@ -10,10 +10,10 @@ Welcome to Project M05 - Reproductibility's documentation!
    :maxdepth: 2
    :caption: Contents:
 	
-   README
-   preprocessor
-   model
-   analysis
+   ../README
+   src.preprocessor
+   src.model
+   src.analysis
    
 
 Indices and tables
