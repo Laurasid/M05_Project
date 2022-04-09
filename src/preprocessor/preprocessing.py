@@ -30,9 +30,7 @@ def import_dataset(url):
     .. warning:: The files from which we want to extract datasets must be .csv or .data
     """
     # different file extension : .csv and .data
-    file_extension = url.split(".")[1]
     filename, file_extension = os.path.splitext(url)
-    print(file_extension)
 
     # different treatment for csv and for .data
     if file_extension == ".csv":
