@@ -1,4 +1,7 @@
-[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+.. image:: https://img.shields.io/badge/docs-latest-orange.svg
+   :target: https://github.com/Laurasid/M05_Project.git/src/doc/_build/html/index.html
+
+
 ===========
 M05_Project
 ===========
