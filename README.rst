@@ -4,6 +4,9 @@
    :target: https://github.com/Laurasid/M05_Project/tree/dist
 .. image:: https://img.shields.io/github/license/Naereen/StrapDown.js.svg
    :target: https://github.com/Laurasid/M05_Project/blob/dist/LICENSE.txt
+.. image:: https://coveralls.io/repos/github/Laurasid/M05_Project/badge.svg?branch=main
+   :target: https://coveralls.io/github/Laurasid/M05_Project?branch=main
+
 
 
 ===========
