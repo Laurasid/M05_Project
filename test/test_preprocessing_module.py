@@ -21,17 +21,11 @@ def test_import_dataset():
     :raise AssertionError:
         the result is not the one that's expected. Instances differ
     """
-<<<<<<< HEAD
     dataset_csv = pr.import_dataset(pkg_resources.resource_filename(__name__, "../src/Data/winequality-red.csv"))
     dataset_data = pr.import_dataset(pkg_resources.resource_filename(__name__, "../src/Data/housing.data"))
 
     assert type(dataset_csv) == pandas.core.frame.DataFrame, "Dataset isn't imported as a DataFrame object"
     assert type(dataset_data) == pandas.core.frame.DataFrame, "Dataset isn't imported as a DataFrame object"
-=======
-    dataset = pr.import_dataset(pkg_resources.resource_filename(__name__, "../src/Data/winequality-red.csv"))
-
-    assert type(dataset) == pandas.core.frame.DataFrame, "Dataset isn't imported as a DataFrame object"
->>>>>>> 2f7a54d47e887b13f50b92b994040987b7c3ef9e
 
 def test_standard_scaling():
     """
@@ -62,12 +56,7 @@ def test_min_max_scaling():
         the result is not the one that's expected. Instances differ
     """
     dataset_scaled = pr.standard_scaling(pr.import_dataset \
-<<<<<<< HEAD
                     (pkg_resources.resource_filename(__name__,"../src/Data/winequality-red.csv")))
-=======
-                                             (pkg_resources.resource_filename(__name__,
-                                                                              "../src/Data/winequality-red.csv")))
->>>>>>> 2f7a54d47e887b13f50b92b994040987b7c3ef9e
 
     assert type(dataset_scaled) == numpy.ndarray, "Scaled dataset isn't return as a numpy.ndarray object"
 
@@ -84,12 +73,7 @@ def test_polynomial_scaling():
         the result is not the one that's expected. Instances differ
     """
     dataset_scaled = pr.standard_scaling(pr.import_dataset \
-<<<<<<< HEAD
                     (pkg_resources.resource_filename(__name__,"../src/Data/winequality-red.csv")))
-=======
-                                             (pkg_resources.resource_filename(__name__,
-                                                                              "../src/Data/winequality-red.csv")))
->>>>>>> 2f7a54d47e887b13f50b92b994040987b7c3ef9e
 
     assert type(dataset_scaled) == numpy.ndarray, "Scaled dataset isn't return as a numpy.ndarray object"
 
@@ -106,7 +90,6 @@ def test_normalize():
         the result is not the one that's expected. Instances differ
     """
     dataset_scaled = pr.standard_scaling(pr.import_dataset \
-<<<<<<< HEAD
                     (pkg_resources.resource_filename(__name__,"../src/Data/winequality-red.csv")))
 
     assert type(dataset_scaled) == numpy.ndarray, "Normalized dataset isn't return as a numpy.ndarray object"
@@ -118,9 +101,3 @@ def test_preprocessing():
 
     assert type(x_train) == numpy.ndarray and type(y_train) == numpy.ndarray and \
            type(x_test) == numpy.ndarray and type(y_test) == numpy.ndarray
-=======
-                                             (pkg_resources.resource_filename(__name__,
-                                                                              "../src/Data/winequality-red.csv")))
-
-    assert type(dataset_scaled) == numpy.ndarray, "Normalized dataset isn't return as a numpy.ndarray object"
->>>>>>> 2f7a54d47e887b13f50b92b994040987b7c3ef9e
