@@ -9,9 +9,6 @@ from sklearn.preprocessing import (
 )
 from sklearn.model_selection import train_test_split
 
-import pkg_resources
-DATAFILE = pkg_resources.resource_filename(__name__, "data.csv")
-
 
 """
 This module is used to preprocess the data before they can be used for the model training.
@@ -34,11 +31,7 @@ def import_dataset(url):
     .. warning:: The files from which we want to extract datasets must be .csv or .data
     """
     # format url
-    format_url = pkg_resources.resource_filename(__name__, url)
-    filename, file_extension = os.path.splitext(format_url)
-
-    print(f'filename : {filename}')
-    print(f'file extension : {file_extension}')
+    filename, file_extension = os.path.splitext(url)
 
     # different treatment for csv and for .data
     if file_extension == ".csv":

@@ -7,6 +7,9 @@ from model import regression_tree as rt
 from analysis import analyse
 import argparse
 
+import pkg_resources
+DATAFILE = pkg_resources.resource_filename(__name__, "data.csv")
+
 def main():
     """
     Run the program as instructed in the README. At each steps an action is expected from user to choose dataset, 
@@ -43,11 +46,11 @@ def main():
     n_dataset = int(input())
     url = ""
     if n_dataset == 1:
-        url = "Data/winequality-red.csv"
+        url = pkg_resources.resource_filename(__name__, "Data/winequality-red.csv")
     elif n_dataset == 2:
-        url = "Data/winequality-white.csv"
+        url = pkg_resources.resource_filename(__name__, "Data/winequality-white.csv")
     elif n_dataset == 3:
-        url = "Data/housing.data"
+        url = pkg_resources.resource_filename(__name__, "Data/housing.data")
     else:
         raise Exception("No dataset for that entry")
 
