@@ -37,7 +37,7 @@ def import_dataset(url):
     # different treatment for csv and for .data
     if file_extension == ".csv":
         dataset = pd.read_csv(url, sep=";")
-    elif file_extension == "data":
+    elif file_extension == ".data":
         # load text file
         text = np.loadtxt(url)
         # turn text file as pandas dataframe
