@@ -1,3 +1,4 @@
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 ===========
 M05_Project
 ===========
