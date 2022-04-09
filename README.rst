@@ -7,8 +7,6 @@
 .. image:: https://coveralls.io/repos/github/Laurasid/M05_Project/badge.svg?branch=main
    :target: https://coveralls.io/github/Laurasid/M05_Project?branch=main
 
-
-
 ===========
 M05_Project
 ===========
