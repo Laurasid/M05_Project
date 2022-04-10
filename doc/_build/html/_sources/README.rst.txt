@@ -49,12 +49,12 @@ We encourage you to make a virtual environnement before installing the dependenc
 
 Dependencies
 ------------
-- `python-dateutil <https://pypi.org/project/python-dateutil/>`_
-- `pandas <https://pandas.pydata.org/>`_
-- `numpy <https://numpy.scipy.org>`_
-- `matplotlib <https://matplotlib.org/>`_
-- `scikit-learn <https://scikit-learn.org/stable/index.html>`_
-- `seaborn <https://seaborn.pydata.org/>`_
+- `python-dateutil <https://pypi.org/project/python-dateutil/>`_ 2.8.2
+- `pandas <https://pandas.pydata.org/>`_ 1.4.1
+- `numpy <https://numpy.scipy.org>`_ 1.22.2
+- `matplotlib <https://matplotlib.org/>`_ 3.5.1
+- `scikit-learn <https://scikit-learn.org/stable/index.html>`_ 1.0.2
+- `seaborn <https://seaborn.pydata.org/>`_ 0.11.2
 
 Do the following : 
   - ``$ git clone `https://github.com/Laurasid/M05_Project.git```
