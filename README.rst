@@ -76,5 +76,5 @@ This project is composed of four packages and one main.
   - Analysis : package containing the loss function methods
   - main.py : run the program
   
-.. image:: ../doc/tree_image.png
+.. image:: doc/tree_image.png
    :width: 350
