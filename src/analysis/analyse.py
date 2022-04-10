@@ -88,3 +88,4 @@ def correlation_matrix(dataset):
     print("Write file analysis/correlationMatrix.png")
     plt.savefig("analysis/correlationMatrix.png")
     plt.show()
+    

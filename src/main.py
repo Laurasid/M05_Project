@@ -108,4 +108,4 @@ def main():
     rmse = round(analyse.rmse(y_test, y_pred), 2)
     print("RMSE : \t", rmse)
 
-    #analyse.correlation_matrix(dataset)
+    analyse.correlation_matrix(dataset)
