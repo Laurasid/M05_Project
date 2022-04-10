@@ -9,6 +9,9 @@ src.model.linear\_regression module
    :undoc-members:
    :show-inheritance:
 
+Use example
+-----------
+
 .. code-block:: python
 
    from model import linear_regression as lr
@@ -24,6 +27,9 @@ src.model.regression\_tree module
    :members:
    :undoc-members:
    :show-inheritance:
+
+Use example
+-----------
 
 .. code-block:: python
 

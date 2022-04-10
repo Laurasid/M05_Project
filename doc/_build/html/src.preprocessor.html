@@ -169,7 +169,12 @@ the scaled dataset</p>
 </dl>
 </dd></dl>
 
+</section>
+<section id="use-example">
+<h2>Use example<a class="headerlink" href="#use-example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">preprocessor</span> <span class="kn">import</span> <span class="n">preprocessing</span> <span class="k">as</span> <span class="n">pp</span>
+<span class="kn">import</span> <span class="nn">pkg_resources</span>
+<span class="n">DATAFILE</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="s2">&quot;data.csv&quot;</span><span class="p">)</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="n">pkg_resources</span><span class="o">.</span><span class="n">resource_filename</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="s2">&quot;path/to/data/to/import&quot;</span><span class="p">)</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">import_dataset</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
@@ -191,6 +196,7 @@ the scaled dataset</p>
     <ul>
 <li><a class="reference internal" href="#">src.preprocessor package</a><ul>
 <li><a class="reference internal" href="#module-src.preprocessor.preprocessing">src.preprocessor.preprocessing module</a></li>
+<li><a class="reference internal" href="#use-example">Use example</a></li>
 </ul>
 </li>
 </ul>
