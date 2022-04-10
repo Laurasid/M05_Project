@@ -59,7 +59,7 @@ def test_min_max_scaling():
     :raise AssertionError:
         the result is not the one that's expected. Instances differ
     """
-    dataset_scaled = pr.standard_scaling(pr.import_dataset \
+    dataset_scaled = pr.min_max_scaling(pr.import_dataset \
                     (pkg_resources.resource_filename(__name__, "../src/Data/winequality-red.csv")))
 
     # test instances of returned objects
@@ -77,7 +77,7 @@ def test_polynomial_scaling():
     :raise AssertionError:
         the result is not the one that's expected. Instances differ
     """
-    dataset_scaled = pr.standard_scaling(pr.import_dataset \
+    dataset_scaled = pr.polynomial_scaling(pr.import_dataset \
                     (pkg_resources.resource_filename(__name__, "../src/Data/winequality-red.csv")))
 
     # test instances of returned objects
@@ -95,7 +95,7 @@ def test_normalize():
     :raise AssertionError:
         the result is not the one that's expected. Instances differ
     """
-    dataset_scaled = pr.standard_scaling(pr.import_dataset \
+    dataset_scaled = pr.normalize(pr.import_dataset \
                     (pkg_resources.resource_filename(__name__, "../src/Data/winequality-red.csv")))
 
     # test instances of returned objects
@@ -116,8 +116,8 @@ def test_preprocessing():
 
     # check for splitting option exception
     with pytest.raises(Exception):
-        pr.preprocessing(dataset, 0, 1)
+        pr.preprocessing(dataset, 0, 2)
 
     # check for scaling method
     with pytest.raises(Exception):
-        pr.preprocessing(dataset, 1, 0)
+        pr.preprocessing(dataset, 2, 0)
