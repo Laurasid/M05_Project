@@ -1,6 +1,8 @@
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src/analysis'))
+
+import pytest
 import analyse as an
 import numpy as np
 from sklearn import metrics
@@ -8,6 +10,7 @@ from sklearn import metrics
 """
 This module is used to test methods of the analysis.analyse module
 """
+
 
 def test_mae():
     """
@@ -43,16 +46,12 @@ def test_mae():
     # check for return type
     assert isinstance(an.mae(x, y), float)
 
-    '''
-    # test with values set of different shapes (not allowed)
+    # test with value sets of different shapes (not allowed)
     x_2 = np.full(5,[1, 5, 3, 7, 8])
     y_2 = np.full(4,[5, 3, 7, 1])
 
-    try:
-        an.mae(x_2,y_2)
-    except NameError:
-        print(f'Error : {NameError}')
-    '''
+    with pytest.raises(Exception):
+        an.mae(x_2, y_2)
 
 
 def test_r2():
@@ -93,16 +92,13 @@ def test_r2():
     # check for return type
     assert isinstance(an.mae(y, y_hat), float)
 
-    '''
+
     # test with values set of different shapes (not allowed)
     x_2 = np.full(5, [1, 5, 3, 7, 8])
     y_2 = np.full(4, [5, 3, 7, 1])
 
-    try:
+    with pytest.raises(Exception):
         an.r2(x_2, y_2)
-    except NameError:
-        print(f'Error : {NameError}')
-    '''
 
 
 def test_rmse():
@@ -137,5 +133,18 @@ def test_rmse():
 
     assert np.isclose(an.rmse(x_1, y_1), metrics.mean_squared_error(x_1, y_1))
 
+    # test with negative values (allowed)
+    x_n = np.array([2, -3])
+    y_n = np.array([-4, 5])
+
+    assert np.isclose(an.rmse(x_n, y_n), metrics.mean_squared_error(x_n, y_n))
+
     # check for return type
     assert isinstance(an.mae(x_1, y_1), float)
+
+    # test with values set of different shapes (not allowed)
+    x_2 = np.full(5, [1, 5, 3, 7, 8])
+    y_2 = np.full(4, [5, 3, 7, 1])
+
+    with pytest.raises(Exception):
+        an.rmse(x_2, y_2)
