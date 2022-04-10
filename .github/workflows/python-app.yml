@@ -58,4 +58,6 @@ jobs:
         sphinx-apidoc -o ./ ./ ./test/
         # build
         sphinx-build ./doc ./doc/_build/html
+        # move README.rst to the root
+        mv ./doc/README.rst ./README.rst
         
