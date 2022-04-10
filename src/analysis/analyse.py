@@ -1,10 +1,12 @@
 from sklearn import metrics
 import seaborn as sns
 import matplotlib.pyplot as plt
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src/'))
 
 """
 This module is used to analyse the results of the model trained. It offers different loss functions methods.
 """
+
 
 def mae(y_test, y_pred):
     """
@@ -81,5 +83,5 @@ def correlation_matrix(dataset):
     sns.heatmap(dataset.corr())
     plt.title("Correlation matrix")
     print("Write file analysis/correlationMatrix.png")
-    plt.savefig("src/analysis/correlationMatrix.png")
+    plt.savefig("analysis/correlationMatrix.png")
     plt.show()
