@@ -22,8 +22,24 @@ For this project we use three different datasets. The datasets are already impor
 Results
 =======
 
-.. csv-table:: Study results
-   :file: ../results.csv
+.. csv-table:: Study results on red wine
+   :file: ../results_red_wine.csv
+   :widths: 30 30 15 15 15 15
+   :header-rows: 2
+   :stub-columns: 1
+
+.. csv-table:: Study results on white wine
+   :file: ../results_white_wine.csv                                                         
+   :widths: 30 30 15 15 15 15
+   :header-rows: 2
+   :stub-columns: 1
+
+.. csv-table:: Study results on Boston houses
+   :file: ../results_boston_houses.csv                                                         
+   :widths: 30 30 15 15 15 15
+   :header-rows: 2
+   :stub-columns: 1
+
 
 Installation
 ============
@@ -60,4 +76,5 @@ This project is composed of four packages and one main.
   - Analysis : package containing the loss function methods
   - main.py : run the program
   
-.. image:: /src/doc/tree_image.png
+.. image:: ../doc/tree_image.png
+   :width: 350
