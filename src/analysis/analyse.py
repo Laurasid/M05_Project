@@ -1,7 +1,10 @@
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src/'))
+
 from sklearn import metrics
 import seaborn as sns
 import matplotlib.pyplot as plt
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src/'))
 
 """
 This module is used to analyse the results of the model trained. It offers different loss functions methods.
