@@ -14,6 +14,7 @@ from sklearn.model_selection import train_test_split
 This module is used to preprocess the data before they can be used for the model training.
 """
 
+
 def import_dataset(url):
     """
     Import the dataset from a path (locally on the computer).
