@@ -19,11 +19,26 @@ For this project we use three different datasets. The datasets are already impor
   - Two dataset for wine quality (red-white) that could be found here : https://archive.ics.uci.edu/ml/datasets/wine+quality
   - One dataset for housing price that can be found here : https://archive.ics.uci.edu/ml/machine-learning-databases/housing/ 
 
+Results
+=======
+
+.. csv-table:: Study results
+   :file: ../results.csv
+
 Installation
 ============
-.. Note:: Make sure you have at least Python 3.8.9 to run the program
+.. Note:: Make sure you have at least Python 3.8.8 to run the program
 
 We encourage you to make a virtual environnement before installing the dependencies.
+
+Dependencies
+------------
+- `python-dateutil <https://pypi.org/project/python-dateutil/>`_
+- `pandas <https://pandas.pydata.org/>`_
+- `numpy <https://numpy.scipy.org>`_
+- `matplotlib <https://matplotlib.org/>`_
+- `scikit-learn <https://scikit-learn.org/stable/index.html>`_
+- `seaborn <https://seaborn.pydata.org/>`_
 
 Do the following : 
   - ``$ git clone `https://github.com/Laurasid/M05_Project.git```
@@ -46,4 +61,3 @@ This project is composed of four packages and one main.
   - main.py : run the program
   
 .. image:: /src/doc/tree_image.png
-
