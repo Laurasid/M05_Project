@@ -86,6 +86,6 @@ def correlation_matrix(dataset):
     sns.heatmap(dataset.corr())
     plt.title("Correlation matrix")
     print("Write file analysis/correlationMatrix.png")
-    plt.savefig("analysis/correlationMatrix.png")
+    plt.savefig("src/analysis/correlationMatrix.png")
     plt.show()
     
